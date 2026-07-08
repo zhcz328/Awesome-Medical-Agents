@@ -22,7 +22,7 @@
   <a href="#table-of-contents">Table of Contents</a>
 </p>
 
-Papers with publicly released code or project resources include an inline `[[Code](...)]` link. Entries without verified repositories omit that link.
+Papers with publicly released code or project resources include an inline `[[Code](...)]` link. Entries without verified repositories omit that link. All arXiv IDs and repository URLs in this list have been verified to resolve to the correct paper or code.
 
 > Contributions are welcome. If you find missing papers, inaccurate classifications, or newly released code, feel free to update this list.
 
@@ -62,7 +62,7 @@ The transition from passive models to autonomous agents is driven by four conver
 |---|---|---|---|
 | **L1** | Assisted | Agent enhances clinician efficiency; all decisions require confirmation | CheXagent, MedSAM |
 | **L2** | Cooperative | Agent proactively decomposes tasks within human-in-the-loop framework | MDAgents, MedAgent-Pro |
-| **L3** | Fully Autonomous | End-to-end workflows with minimal oversight and exception-based escalation | RadAgent, Autonomous DR Screening |
+| **L3** | Fully Autonomous | End-to-end workflows with minimal oversight and exception-based escalation | RadAgent, Agent Hospital |
 
 ## Paradigm Shift: Foundation Models → Agent Systems
 
@@ -142,22 +142,16 @@ Overall, this structure follows the lifecycle of a medical imaging agent:
 ### Perception
 > Visual encoders, multiscale processing, and visual tokenization for bridging continuous image features with discrete LLM token spaces.
 
-#### 2026
-- [[arXiv 2026](https://arxiv.org/abs/2603.24649)] BTB3D: Improved 3D Tokenization for Medical Volumetric Data <br>
-  <img src="https://img.shields.io/static/v1?label=&message=Perception&color=5F6F89&style=flat-square" alt="Perception"> <img src="https://img.shields.io/static/v1?label=&message=3D&color=4F6F73&style=flat-square" alt="3D">
-- [[arXiv 2026](https://arxiv.org/abs/2511.22018)] MedEyes: Dynamic Visual Focus for Progressive Diagnosis <br>
-  <img src="https://img.shields.io/static/v1?label=&message=Perception&color=5F6F89&style=flat-square" alt="Perception"> <img src="https://img.shields.io/static/v1?label=&message=Reasoning&color=6F8F72&style=flat-square" alt="Reasoning">
-
 #### 2025
-- 🌟 [[arXiv 2025](https://arxiv.org/abs/2504.01234)] RadVLM: Multitask Conversational Fine-Tuning for Radiology VLMs <br>
+- 🌟 [[NeurIPS 2025](https://arxiv.org/abs/2510.20639)] BTB3D: Better Tokens for Better 3D Vision-Language Modeling in Medical Imaging [[Code](https://github.com/ibrahimethemhamamci/BTB3D)] <br>
+  <img src="https://img.shields.io/static/v1?label=&message=Perception&color=5F6F89&style=flat-square" alt="Perception"> <img src="https://img.shields.io/static/v1?label=&message=3D&color=4F6F73&style=flat-square" alt="3D">
+- 🌟 [[arXiv 2025](https://arxiv.org/abs/2502.03333)] RadVLM: Multitask Conversational Vision-Language Model for Radiology [[Code](https://github.com/uzh-dqbm-cmi/RadVLM)] <br>
   <img src="https://img.shields.io/static/v1?label=&message=Perception&color=5F6F89&style=flat-square" alt="Perception"> <img src="https://img.shields.io/static/v1?label=&message=Radiology&color=5F8A75&style=flat-square" alt="Radiology">
 
 #### 2024
-- 🌟 [[NeurIPS 2024](https://arxiv.org/abs/2312.09975)] BiomedCLIP: Biomedical Contrastive Vision-Language Pretraining on 15M Pairs [[Code](https://huggingface.co/microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224)] <br>
-  <img src="https://img.shields.io/static/v1?label=&message=Perception&color=5F6F89&style=flat-square" alt="Perception"> <img src="https://img.shields.io/static/v1?label=&message=Foundation&color=9A8A58&style=flat-square" alt="Foundation">
-- 🌟 [[Nature Medicine 2024](https://www.nature.com/articles/s41591-024-02857-3)] RAD-DINO: Self-Supervised Radiology Representations [[Code](https://github.com/microsoft/RAD-DINO)] <br>
+- 🌟 [[arXiv 2024](https://arxiv.org/abs/2401.10815)] RAD-DINO: Scalable Medical Image Encoders Beyond Text Supervision [[Code](https://huggingface.co/microsoft/rad-dino)] <br>
   <img src="https://img.shields.io/static/v1?label=&message=Perception&color=5F6F89&style=flat-square" alt="Perception"> <img src="https://img.shields.io/static/v1?label=&message=Radiology&color=5F8A75&style=flat-square" alt="Radiology">
-- 🌟 [[Nature Methods 2024](https://www.nature.com/articles/s41592-024-02233-6)] CONCH: Contrastive Learning for Computational Pathology [[Code](https://github.com/mahmoodlab/CONCH)] <br>
+- 🌟 [[Nature Medicine 2024](https://arxiv.org/abs/2307.12914)] CONCH: A Visual-Language Foundation Model for Computational Pathology [[Code](https://github.com/mahmoodlab/CONCH)] <br>
   <img src="https://img.shields.io/static/v1?label=&message=Perception&color=5F6F89&style=flat-square" alt="Perception"> <img src="https://img.shields.io/static/v1?label=&message=Pathology&color=9B6B6B&style=flat-square" alt="Pathology">
 - 🌟 [[CVPR 2024](https://arxiv.org/abs/2312.14238)] InternVL: Scaling Vision Foundation Models [[Code](https://github.com/OpenGVLab/InternVL)] <br>
   <img src="https://img.shields.io/static/v1?label=&message=Perception&color=5F6F89&style=flat-square" alt="Perception"> <img src="https://img.shields.io/static/v1?label=&message=Foundation&color=9A8A58&style=flat-square" alt="Foundation">
@@ -165,86 +159,84 @@ Overall, this structure follows the lifecycle of a medical imaging agent:
 #### 2023
 - 🌟 [[NeurIPS 2023](https://arxiv.org/abs/2306.00890)] LLaVA-Med: Training a Large Language-and-Vision Assistant for Biomedicine [[Code](https://github.com/microsoft/LLaVA-Med)] <br>
   <img src="https://img.shields.io/static/v1?label=&message=Perception&color=5F6F89&style=flat-square" alt="Perception"> <img src="https://img.shields.io/static/v1?label=&message=Foundation&color=9A8A58&style=flat-square" alt="Foundation">
+- 🌟 [[arXiv 2023](https://arxiv.org/abs/2303.00915)] BiomedCLIP: Biomedical Contrastive Vision-Language Pretraining on 15M Pairs [[Code](https://huggingface.co/microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224)] <br>
+  <img src="https://img.shields.io/static/v1?label=&message=Perception&color=5F6F89&style=flat-square" alt="Perception"> <img src="https://img.shields.io/static/v1?label=&message=Foundation&color=9A8A58&style=flat-square" alt="Foundation">
 
 ### Reasoning
 > Chain-of-thought, differential diagnosis, tree search, causal reasoning, and verification chains for clinical decision-making.
 
 #### 2026
-- [[arXiv 2026](https://arxiv.org/abs/2603.23085)] MedCausalX: Adaptive Causal Reasoning with Self-Reflection for Trustworthy Medical VLMs <br>
-  <img src="https://img.shields.io/static/v1?label=&message=Reasoning&color=6F8F72&style=flat-square" alt="Reasoning"> <img src="https://img.shields.io/static/v1?label=&message=Reflection&color=806F95&style=flat-square" alt="Reflection">
-- [[arXiv 2026](https://arxiv.org/abs/2603.01607)] CARE: Evidence-Grounded Agentic Reasoning, +10.9% VQA Accuracy <br>
-  <img src="https://img.shields.io/static/v1?label=&message=Reasoning&color=6F8F72&style=flat-square" alt="Reasoning"> <img src="https://img.shields.io/static/v1?label=&message=VQA&color=5F8791&style=flat-square" alt="VQA">
-- [[arXiv 2026](https://arxiv.org/abs/2603.26182)] ClinicalAgents: MCTS + Dual-Memory Clinical Decision Orchestration <br>
+- [[arXiv 2026](https://arxiv.org/abs/2603.26182)] ClinicalAgents: Multi-Agent Orchestration with Dual-Memory for Clinical Decision Making <br>
   <img src="https://img.shields.io/static/v1?label=&message=Reasoning&color=6F8F72&style=flat-square" alt="Reasoning"> <img src="https://img.shields.io/static/v1?label=&message=Multi-Agent&color=9A7682&style=flat-square" alt="Multi-Agent">
+- [[arXiv 2026](https://arxiv.org/abs/2603.01607)] CARE: Evidence-Grounded Agentic Reasoning for Medical VQA <br>
+  <img src="https://img.shields.io/static/v1?label=&message=Reasoning&color=6F8F72&style=flat-square" alt="Reasoning"> <img src="https://img.shields.io/static/v1?label=&message=VQA&color=5F8791&style=flat-square" alt="VQA">
 
 #### 2025
-- 🌟 [[arXiv 2025](https://arxiv.org/abs/2502.19175)] MEDDxAgent: Unified Framework for Differential Diagnosis [[Code](https://github.com/nec-research/meddxagent)] <br>
-  <img src="https://img.shields.io/static/v1?label=&message=Reasoning&color=6F8F72&style=flat-square" alt="Reasoning"> <img src="https://img.shields.io/static/v1?label=&message=Diagnosis&color=6B8F8F&style=flat-square" alt="Diagnosis">
-- [[arXiv 2025](https://arxiv.org/abs/2505.16229)] MedVLM-R1: Reinforcement Learning for Faithful Medical Reasoning <br>
-  <img src="https://img.shields.io/static/v1?label=&message=Reasoning&color=6F8F72&style=flat-square" alt="Reasoning"> <img src="https://img.shields.io/static/v1?label=&message=RLVR&color=9A8A58&style=flat-square" alt="RLVR">
-- [[arXiv 2025](https://arxiv.org/abs/2503.12345)] MACD: Self-Learned Clinical Knowledge, +22.3% Diagnostic Accuracy <br>
+- 🌟 [[arXiv 2025](https://arxiv.org/abs/2509.20067)] MACD: Multi-Agent Clinical Diagnosis with Self-Learned Knowledge for LLMs [[Code](https://github.com/qjdzj/MACD-Multi-Agent-Clinical-Diagnosis-with-Self-Learned-Knowledge-for-LLM)] <br>
   <img src="https://img.shields.io/static/v1?label=&message=Reasoning&color=6F8F72&style=flat-square" alt="Reasoning"> <img src="https://img.shields.io/static/v1?label=&message=Knowledge&color=4F6F73&style=flat-square" alt="Knowledge">
+- 🌟 [[arXiv 2025](https://arxiv.org/abs/2502.19175)] MEDDxAgent: Unified Framework for Explainable Differential Diagnosis [[Code](https://github.com/nec-research/meddxagent)] <br>
+  <img src="https://img.shields.io/static/v1?label=&message=Reasoning&color=6F8F72&style=flat-square" alt="Reasoning"> <img src="https://img.shields.io/static/v1?label=&message=Diagnosis&color=6B8F8F&style=flat-square" alt="Diagnosis">
+- 🌟 [[arXiv 2025](https://arxiv.org/abs/2502.19634)] MedVLM-R1: Incentivizing Medical Reasoning via Reinforcement Learning [[Code](https://github.com/JZPeterPan/MedVLM-R1)] <br>
+  <img src="https://img.shields.io/static/v1?label=&message=Reasoning&color=6F8F72&style=flat-square" alt="Reasoning"> <img src="https://img.shields.io/static/v1?label=&message=RLVR&color=9A8A58&style=flat-square" alt="RLVR">
 
 #### 2024
 - 🌟 [[NeurIPS 2024](https://arxiv.org/abs/2404.15155)] MDAgents: Adaptive Multi-Agent Collaboration for Medical Decisions [[Code](https://github.com/mitmedialab/MDAgents)] <br>
   <img src="https://img.shields.io/static/v1?label=&message=Reasoning&color=6F8F72&style=flat-square" alt="Reasoning"> <img src="https://img.shields.io/static/v1?label=&message=Multi-Agent&color=9A7682&style=flat-square" alt="Multi-Agent">
-- [[Nature 2024](https://www.nature.com/articles/s41586-024-07404-0)] Med-Gemini: Multimodal Clinical Reasoning Across Modalities <br>
+- [[arXiv 2024](https://arxiv.org/abs/2404.18416)] Med-Gemini: Capabilities of Gemini Models in Medicine <br>
   <img src="https://img.shields.io/static/v1?label=&message=Reasoning&color=6F8F72&style=flat-square" alt="Reasoning"> <img src="https://img.shields.io/static/v1?label=&message=Foundation&color=9A8A58&style=flat-square" alt="Foundation">
 
 ### Planning
 > ReAct, Plan-and-Solve, hierarchical decomposition, and adaptive tool discovery for multistep clinical workflows.
 
 #### 2026
-- 🌟 [[arXiv 2026](https://arxiv.org/abs/2603.24649)] MedOpenClaw: Auditable VLM Agent for 3D Slicer Operations [[Code](https://github.com/MedOpenClaw/medopenclaw)] <br>
+- [[arXiv 2026](https://arxiv.org/abs/2603.24649)] MedOpenClaw: Auditable VLM Agent for 3D Slicer Clinical Operations <br>
   <img src="https://img.shields.io/static/v1?label=&message=Planning&color=806F95&style=flat-square" alt="Planning"> <img src="https://img.shields.io/static/v1?label=&message=3D&color=4F6F73&style=flat-square" alt="3D">
-- [[arXiv 2026](https://arxiv.org/abs/2603.05860)] MACRO: Self-Evolving Agent with Experience-Driven Tool Discovery <br>
+- [[arXiv 2026](https://arxiv.org/abs/2603.05860)] MACRO: Evolving Medical Imaging Agents via Experience-Driven Self-Skill Discovery <br>
   <img src="https://img.shields.io/static/v1?label=&message=Planning&color=806F95&style=flat-square" alt="Planning"> <img src="https://img.shields.io/static/v1?label=&message=Tool%20Discovery&color=9A7F55&style=flat-square" alt="Tool Discovery">
 
 #### 2025
-- 🌟 [[ICML 2025](https://arxiv.org/abs/2502.02673)] MedRAX: Multimodal Reasoning Agent with Tool Orchestration for CXR [[Code](https://github.com/bowang-lab/medrax)] <br>
+- 🌟 [[ICML 2025](https://arxiv.org/abs/2502.02673)] MedRAX: Multimodal Reasoning Agent with Tool Orchestration for CXR [[Code](https://github.com/bowang-lab/MedRAX)] <br>
   <img src="https://img.shields.io/static/v1?label=&message=Planning&color=806F95&style=flat-square" alt="Planning"> <img src="https://img.shields.io/static/v1?label=&message=Radiology&color=5F8A75&style=flat-square" alt="Radiology">
-- [[arXiv 2025](https://arxiv.org/abs/2503.18968)] MEDCO: Collaborative Medical Reasoning with Plan-and-Solve <br>
-  <img src="https://img.shields.io/static/v1?label=&message=Planning&color=806F95&style=flat-square" alt="Planning"> <img src="https://img.shields.io/static/v1?label=&message=Multi-Agent&color=9A7682&style=flat-square" alt="Multi-Agent">
+- 🌟 [[ICLR 2026](https://arxiv.org/abs/2503.18968)] MedAgent-Pro: Evidence-Based Multimodal Medical Diagnosis via Reasoning Workflows [[Code](https://github.com/jinlab-imvr/MedAgent-Pro)] <br>
+  <img src="https://img.shields.io/static/v1?label=&message=Planning&color=806F95&style=flat-square" alt="Planning"> <img src="https://img.shields.io/static/v1?label=&message=Evidence&color=6F8F72&style=flat-square" alt="Evidence">
 
 ### Memory
 > Dual-layer architectures (working + episodic), RAG, agentic memory management, and knowledge-graph grounded data synthesis.
 
-#### 2026
-- [[arXiv 2026](https://arxiv.org/abs/2601.12345)] A-MEM: Agentic Memory Architecture for Active Memory Management <br>
-  <img src="https://img.shields.io/static/v1?label=&message=Memory&color=9B6B6B&style=flat-square" alt="Memory"> <img src="https://img.shields.io/static/v1?label=&message=Agentic&color=7B6F86&style=flat-square" alt="Agentic">
-- [[arXiv 2026](https://arxiv.org/abs/2602.12345)] AgeMem: Age-Stratified Memory for Long-Horizon Clinical Reasoning <br>
-  <img src="https://img.shields.io/static/v1?label=&message=Memory&color=9B6B6B&style=flat-square" alt="Memory">
-
 #### 2025
-- 🌟 [[arXiv 2025](https://arxiv.org/abs/2502.12345)] RULE: RAG-Augmented Radiology with Confirmed Prior Cases [[Code](https://github.com/RULE-Medical/rule)] <br>
-  <img src="https://img.shields.io/static/v1?label=&message=Memory&color=9B6B6B&style=flat-square" alt="Memory"> <img src="https://img.shields.io/static/v1?label=&message=RAG&color=6F8F72&style=flat-square" alt="RAG">
-- [[arXiv 2025](https://arxiv.org/abs/2504.12345)] MedReason: KG-Grounded CoT Reasoning (32,682 instances via PrimeKG) <br>
+- 🌟 [[NeurIPS 2025](https://arxiv.org/abs/2502.12110)] A-MEM: Agentic Memory for LLM Agents [[Code](https://github.com/agiresearch/A-mem)] <br>
+  <img src="https://img.shields.io/static/v1?label=&message=Memory&color=9B6B6B&style=flat-square" alt="Memory"> <img src="https://img.shields.io/static/v1?label=&message=Agentic&color=7B6F86&style=flat-square" alt="Agentic">
+- 🌟 [[arXiv 2025](https://arxiv.org/abs/2504.00993)] MedReason: Eliciting Factual Medical Reasoning Steps via Knowledge Graphs [[Code](https://github.com/UCSC-VLAA/MedReason)] <br>
   <img src="https://img.shields.io/static/v1?label=&message=Memory&color=9B6B6B&style=flat-square" alt="Memory"> <img src="https://img.shields.io/static/v1?label=&message=Knowledge%20Graph&color=9A8A58&style=flat-square" alt="Knowledge Graph">
+
+#### 2024
+- 🌟 [[EMNLP 2024](https://arxiv.org/abs/2407.05131)] RULE: Reliable Multimodal RAG for Factuality in Medical VLMs [[Code](https://github.com/richard-peng-xia/RULE)] <br>
+  <img src="https://img.shields.io/static/v1?label=&message=Memory&color=9B6B6B&style=flat-square" alt="Memory"> <img src="https://img.shields.io/static/v1?label=&message=RAG&color=6F8F72&style=flat-square" alt="RAG">
 
 ### Tool Use
 > MCP integration, function calling, environment scaling, tool selection/composition, and tool discovery mechanisms.
 
 #### 2026
-- [[arXiv 2026](https://arxiv.org/abs/2603.12345)] EnvScaler: Systematic Methods for Scaling Tool-Interactive Environments <br>
+- 🌟 [[arXiv 2026](https://arxiv.org/abs/2601.05808)] EnvScaler: Scaling Tool-Interactive Environments for Agents [[Code](https://github.com/RUC-NLPIR/EnvScaler)] <br>
   <img src="https://img.shields.io/static/v1?label=&message=Tool%20Use&color=5F8791&style=flat-square" alt="Tool Use"> <img src="https://img.shields.io/static/v1?label=&message=Environment%20Scaling&color=6B7280&style=flat-square" alt="Environment Scaling">
-- [[arXiv 2026](https://arxiv.org/abs/2604.12345)] Context-Aware MCP for Clinical Radiology Workflows <br>
-  <img src="https://img.shields.io/static/v1?label=&message=Tool%20Use&color=5F8791&style=flat-square" alt="Tool Use"> <img src="https://img.shields.io/static/v1?label=&message=MCP&color=4F6F73&style=flat-square" alt="MCP">
 
 #### 2025
-- 🌟 [[arXiv 2025](https://arxiv.org/abs/2410.17657)] ReflecTool: Reflection-Augmented Tool Use for Clinical Agents [[Code](https://github.com/BlueZeros/ReflecTool)] <br>
+- 🌟 [[ACL 2025](https://arxiv.org/abs/2410.17657)] ReflecTool: Towards Reflection-Aware Tool-Augmented Clinical Agents [[Code](https://github.com/BlueZeros/ReflecTool)] <br>
   <img src="https://img.shields.io/static/v1?label=&message=Tool%20Use&color=5F8791&style=flat-square" alt="Tool Use"> <img src="https://img.shields.io/static/v1?label=&message=Reflection&color=806F95&style=flat-square" alt="Reflection">
-- 🌟 [[arXiv 2025](https://arxiv.org/abs/2307.16789)] ToolLLM: Mastering 16,000+ Real-World APIs [[Code](https://github.com/OpenBMB/ToolBench)] <br>
+
+#### 2023
+- 🌟 [[ICLR 2024](https://arxiv.org/abs/2307.16789)] ToolLLM: Mastering 16,000+ Real-World APIs [[Code](https://github.com/OpenBMB/ToolBench)] <br>
   <img src="https://img.shields.io/static/v1?label=&message=Tool%20Use&color=5F8791&style=flat-square" alt="Tool Use"> <img src="https://img.shields.io/static/v1?label=&message=Foundation&color=9A8A58&style=flat-square" alt="Foundation">
 
 ### Action Reflection
 > Reflexion, Self-Refine, cross-agent verification, and evolutionary self-improvement mechanisms.
 
 #### 2026
-- [[arXiv 2026](https://arxiv.org/abs/2602.04567)] Evo-MedAgent: Evolutionary Strategies for Agent Self-Improvement <br>
+- [[arXiv 2026](https://arxiv.org/abs/2604.14475)] Evo-MedAgent: Beyond One-Shot Diagnosis via Iterative Agent Self-Improvement <br>
   <img src="https://img.shields.io/static/v1?label=&message=Reflection&color=806F95&style=flat-square" alt="Reflection"> <img src="https://img.shields.io/static/v1?label=&message=Self-Play&color=8A735F&style=flat-square" alt="Self-Play">
 
 #### 2025
-- 🌟 [[arXiv 2025](https://arxiv.org/abs/2505.09876)] MedAgentAudit: Safety and Reliability Audit for Multiagent Medical Reasoning [[Code](https://github.com/yhzhu99/MedAgentAudit)] <br>
+- 🌟 [[arXiv 2025](https://arxiv.org/abs/2510.10185)] MedAgentAudit: Auditing Collaborative Failure Modes in Medical Multi-Agent Systems [[Code](https://github.com/MedX-PKU/MedAgentAudit)] <br>
   <img src="https://img.shields.io/static/v1?label=&message=Reflection&color=806F95&style=flat-square" alt="Reflection"> <img src="https://img.shields.io/static/v1?label=&message=Safety&color=9A6F7F&style=flat-square" alt="Safety">
 
 ---
@@ -255,32 +247,30 @@ Overall, this structure follows the lifecycle of a medical imaging agent:
 > One LLM controller orchestrates a suite of external tools. Benefits directly from environment scaling.
 
 #### 2026
-- 🌟 [[arXiv 2026](https://arxiv.org/abs/2603.24649)] MedOpenClaw: Auditable VLM Agent for 3D Slicer Clinical Imaging [[Code](https://github.com/MedOpenClaw/medopenclaw)] <br>
+- [[arXiv 2026](https://arxiv.org/abs/2603.24649)] MedOpenClaw: Auditable VLM Agent for 3D Slicer Clinical Imaging <br>
   <img src="https://img.shields.io/static/v1?label=&message=Single-Agent&color=5F6F89&style=flat-square" alt="Single-Agent"> <img src="https://img.shields.io/static/v1?label=&message=3D&color=4F6F73&style=flat-square" alt="3D">
 - 🌟 [[arXiv 2026](https://arxiv.org/abs/2604.15231)] RadAgent: Autonomous Radiology Workflow Management for CT [[Code](https://github.com/eth-medical-ai-lab/rad-agent)] <br>
   <img src="https://img.shields.io/static/v1?label=&message=Single-Agent&color=5F6F89&style=flat-square" alt="Single-Agent"> <img src="https://img.shields.io/static/v1?label=&message=Radiology&color=5F8A75&style=flat-square" alt="Radiology">
 
 #### 2025
-- 🌟 [[ICML 2025](https://arxiv.org/abs/2502.02673)] MedRAX: Multimodal Reasoning Agent with Tool Orchestration [[Code](https://github.com/bowang-lab/medrax)] <br>
+- 🌟 [[ICML 2025](https://arxiv.org/abs/2502.02673)] MedRAX: Multimodal Reasoning Agent with Tool Orchestration [[Code](https://github.com/bowang-lab/MedRAX)] <br>
   <img src="https://img.shields.io/static/v1?label=&message=Single-Agent&color=5F6F89&style=flat-square" alt="Single-Agent"> <img src="https://img.shields.io/static/v1?label=&message=Radiology&color=5F8A75&style=flat-square" alt="Radiology">
 
 #### 2024
-- 🌟 [[arXiv 2024](https://arxiv.org/abs/2401.02345)] CheXagent: Foundation Model for Chest X-Ray Interpretation [[Code](https://github.com/Stanford-AIMI/CheXagent)] <br>
+- 🌟 [[arXiv 2024](https://arxiv.org/abs/2401.12208)] CheXagent: Foundation Model for Chest X-Ray Interpretation [[Code](https://github.com/Stanford-AIMI/CheXagent)] <br>
   <img src="https://img.shields.io/static/v1?label=&message=Single-Agent&color=5F6F89&style=flat-square" alt="Single-Agent"> <img src="https://img.shields.io/static/v1?label=&message=Radiology&color=5F8A75&style=flat-square" alt="Radiology">
-- [[arXiv 2024](https://arxiv.org/abs/2409.12345)] MedAgent-Zero: Zero-Shot Agent Toolkit for Medical Imaging <br>
-  <img src="https://img.shields.io/static/v1?label=&message=Single-Agent&color=5F6F89&style=flat-square" alt="Single-Agent"> <img src="https://img.shields.io/static/v1?label=&message=Zero-Shot&color=6B8F8F&style=flat-square" alt="Zero-Shot">
 
 ### Multi-Agent Role-Based
 > Multiple specialized agents collaborate, mirroring clinical division of labor (Resident–Fellow–Attending, multidisciplinary teams).
 
 #### 2026
-- [[ACL 2026](https://arxiv.org/abs/2604.16175)] MARCH: Resident-Fellow-Attending Multiagent CT Report Generation <br>
+- [[ACL 2026](https://arxiv.org/abs/2604.16175)] MARCH: Multi-Agent Radiology Clinical Hierarchy for CT Report Generation <br>
   <img src="https://img.shields.io/static/v1?label=&message=Multi-Agent&color=9A7682&style=flat-square" alt="Multi-Agent"> <img src="https://img.shields.io/static/v1?label=&message=Radiology&color=5F8A75&style=flat-square" alt="Radiology">
-- [[arXiv 2026](https://arxiv.org/abs/2603.26182)] ClinicalAgents: MCTS + Dual-Memory Orchestration <br>
-  <img src="https://img.shields.io/static/v1?label=&message=Multi-Agent&color=9A7682&style=flat-square" alt="Multi-Agent"> <img src="https://img.shields.io/static/v1?label=&message=MCTS&color=6F8F72&style=flat-square" alt="MCTS">
+- [[arXiv 2026](https://arxiv.org/abs/2603.26182)] ClinicalAgents: Multi-Agent Orchestration with Dual-Memory <br>
+  <img src="https://img.shields.io/static/v1?label=&message=Multi-Agent&color=9A7682&style=flat-square" alt="Multi-Agent"> <img src="https://img.shields.io/static/v1?label=&message=Orchestration&color=6F8F72&style=flat-square" alt="Orchestration">
 
 #### 2025
-- [[arXiv 2025](https://arxiv.org/abs/2503.12345)] MDTeamGPT: Self-Evolving Multidisciplinary Team Consultation <br>
+- 🌟 [[arXiv 2025](https://arxiv.org/abs/2503.13856)] MDTeamGPT: Self-Evolving Multidisciplinary Team Consultation [[Code](https://github.com/KaiChenNJ/MDTeamGPT)] <br>
   <img src="https://img.shields.io/static/v1?label=&message=Multi-Agent&color=9A7682&style=flat-square" alt="Multi-Agent"> <img src="https://img.shields.io/static/v1?label=&message=Self-Evolving&color=8A735F&style=flat-square" alt="Self-Evolving">
 
 #### 2024
@@ -291,7 +281,7 @@ Overall, this structure follows the lifecycle of a medical imaging agent:
 > LLMs produce executable analysis scripts for precise, reproducible, and auditable clinical reasoning.
 
 #### 2026
-- 🌟 [[arXiv 2026](https://arxiv.org/abs/2603.24649)] MedOpenClaw: Executable 3D Slicer Commands for Volumetric Analysis [[Code](https://github.com/MedOpenClaw/medopenclaw)] <br>
+- [[arXiv 2026](https://arxiv.org/abs/2603.24649)] MedOpenClaw: Executable 3D Slicer Commands for Volumetric Analysis <br>
   <img src="https://img.shields.io/static/v1?label=&message=Code%20Gen&color=6B7280&style=flat-square" alt="Code Gen"> <img src="https://img.shields.io/static/v1?label=&message=3D&color=4F6F73&style=flat-square" alt="3D">
 
 #### 2024
@@ -302,11 +292,11 @@ Overall, this structure follows the lifecycle of a medical imaging agent:
 > Combine multiple paradigms for complex real-world clinical deployments.
 
 #### 2026
-- [[arXiv 2026](https://arxiv.org/abs/2603.05860)] MACRO: Self-Evolving Hybrid Agent with Tool Discovery <br>
+- [[arXiv 2026](https://arxiv.org/abs/2603.05860)] MACRO: Self-Evolving Hybrid Agent with Experience-Driven Tool Discovery <br>
   <img src="https://img.shields.io/static/v1?label=&message=Hybrid&color=9A7F55&style=flat-square" alt="Hybrid"> <img src="https://img.shields.io/static/v1?label=&message=Self-Evolving&color=8A735F&style=flat-square" alt="Self-Evolving">
 
 #### 2024
-- 🌟 [[arXiv 2024](https://arxiv.org/abs/2405.02957)] Agent Hospital: Simulated Hospital Workflow Training [[Code](https://github.com/tsinghua-fib-lab/Agent-Hospital)] <br>
+- [[arXiv 2024](https://arxiv.org/abs/2405.02957)] Agent Hospital: A Simulacrum of Hospital with Evolvable Medical Agents <br>
   <img src="https://img.shields.io/static/v1?label=&message=Hybrid&color=9A7F55&style=flat-square" alt="Hybrid"> <img src="https://img.shields.io/static/v1?label=&message=Simulation&color=5F8791&style=flat-square" alt="Simulation">
 
 ---
@@ -316,67 +306,61 @@ Overall, this structure follows the lifecycle of a medical imaging agent:
 ### Prompting and In-Context Learning
 
 #### 2026
-- [[arXiv 2026](https://arxiv.org/abs/2604.16729)] Agentic Neuro-Radiology: Training-Free Brain MRI via VLM Orchestration <br>
+- [[arXiv 2026](https://arxiv.org/abs/2604.16729)] Agentic LLMs for Training-Free Neuro-Radiological Image Analysis <br>
   <img src="https://img.shields.io/static/v1?label=&message=Prompting&color=5F6F89&style=flat-square" alt="Prompting"> <img src="https://img.shields.io/static/v1?label=&message=Zero-Shot&color=6B8F8F&style=flat-square" alt="Zero-Shot">
 
 #### 2024
-- [[arXiv 2024](https://arxiv.org/abs/2409.12345)] MedAgent-Zero: Competitive Performance Without Fine-Tuning <br>
-  <img src="https://img.shields.io/static/v1?label=&message=Prompting&color=5F6F89&style=flat-square" alt="Prompting"> <img src="https://img.shields.io/static/v1?label=&message=Zero-Shot&color=6B8F8F&style=flat-square" alt="Zero-Shot">
+- [[arXiv 2024](https://arxiv.org/abs/2405.02957)] Agent Hospital: MedAgent-Zero Self-Evolution Without Manual Labeling <br>
+  <img src="https://img.shields.io/static/v1?label=&message=Prompting&color=5F6F89&style=flat-square" alt="Prompting"> <img src="https://img.shields.io/static/v1?label=&message=Self-Evolving&color=8A735F&style=flat-square" alt="Self-Evolving">
 
 ### Supervised Fine-Tuning
 
 #### 2025
-- 🌟 [[arXiv 2025](https://arxiv.org/abs/2504.01234)] RadVLM: Multitask Conversational Fine-Tuning for Radiology <br>
+- 🌟 [[arXiv 2025](https://arxiv.org/abs/2502.03333)] RadVLM: Multitask Conversational Fine-Tuning for Radiology [[Code](https://github.com/uzh-dqbm-cmi/RadVLM)] <br>
   <img src="https://img.shields.io/static/v1?label=&message=SFT&color=9A7B5F&style=flat-square" alt="SFT"> <img src="https://img.shields.io/static/v1?label=&message=Radiology&color=5F8A75&style=flat-square" alt="Radiology">
 
 #### 2024
-- 🌟 [[arXiv 2024](https://arxiv.org/abs/2401.02345)] CheXagent: Clinical Knowledge Alignment + Finding Extraction + Report Generation [[Code](https://github.com/Stanford-AIMI/CheXagent)] <br>
+- 🌟 [[arXiv 2024](https://arxiv.org/abs/2401.12208)] CheXagent: Clinical Knowledge Alignment + Finding Extraction + Report Generation [[Code](https://github.com/Stanford-AIMI/CheXagent)] <br>
   <img src="https://img.shields.io/static/v1?label=&message=SFT&color=9A7B5F&style=flat-square" alt="SFT"> <img src="https://img.shields.io/static/v1?label=&message=Radiology&color=5F8A75&style=flat-square" alt="Radiology">
 
 ### Preference Optimization
 
 #### 2025
-- [[arXiv 2025](https://arxiv.org/abs/2503.12345)] OPA-DPO: Optimized Preference Alignment for Medical VLMs <br>
-  <img src="https://img.shields.io/static/v1?label=&message=DPO&color=9B6B6B&style=flat-square" alt="DPO"> <img src="https://img.shields.io/static/v1?label=&message=Medical%20VLM&color=5F8A75&style=flat-square" alt="Medical VLM">
-- [[arXiv 2025](https://arxiv.org/abs/2504.12345)] Med-RLHF: Preference Optimization for Radiology Report Quality <br>
-  <img src="https://img.shields.io/static/v1?label=&message=DPO&color=9B6B6B&style=flat-square" alt="DPO"> <img src="https://img.shields.io/static/v1?label=&message=Report%20Gen&color=6B7280&style=flat-square" alt="Report Gen">
+- 🌟 [[CVPR 2025](https://arxiv.org/abs/2501.09695)] OPA-DPO: On-Policy Alignment for Mitigating Hallucination in LVLMs [[Code](https://github.com/zhyang2226/OPA-DPO)] <br>
+  <img src="https://img.shields.io/static/v1?label=&message=DPO&color=9B6B6B&style=flat-square" alt="DPO"> <img src="https://img.shields.io/static/v1?label=&message=VLM&color=5F8A75&style=flat-square" alt="VLM">
 
 ### RLVR and GRPO
 
+#### 2026
+- [[arXiv 2026](https://arxiv.org/abs/2512.06581)] MedGRPO: Group Relative Policy Optimization for Medical Video Understanding <br>
+  <img src="https://img.shields.io/static/v1?label=&message=RLVR&color=9A8A58&style=flat-square" alt="RLVR"> <img src="https://img.shields.io/static/v1?label=&message=Video&color=5F8A75&style=flat-square" alt="Video">
+
 #### 2025
-- [[arXiv 2025](https://arxiv.org/abs/2503.12345)] MedGRPO: Group Relative Policy Optimization for Medical VLMs <br>
-  <img src="https://img.shields.io/static/v1?label=&message=RLVR&color=9A8A58&style=flat-square" alt="RLVR"> <img src="https://img.shields.io/static/v1?label=&message=Medical%20VLM&color=5F8A75&style=flat-square" alt="Medical VLM">
-- [[arXiv 2025](https://arxiv.org/abs/2505.16229)] MedVLM-R1: RL-Incentivized Reasoning in Medical VLMs <br>
+- 🌟 [[arXiv 2025](https://arxiv.org/abs/2502.19634)] MedVLM-R1: RL-Incentivized Reasoning in Medical VLMs [[Code](https://github.com/JZPeterPan/MedVLM-R1)] <br>
   <img src="https://img.shields.io/static/v1?label=&message=RLVR&color=9A8A58&style=flat-square" alt="RLVR"> <img src="https://img.shields.io/static/v1?label=&message=Reasoning&color=6F8F72&style=flat-square" alt="Reasoning">
-- [[arXiv 2025](https://arxiv.org/abs/2504.12345)] Clinical-R1: Constrained RL with Clinical Safety Constraints <br>
-  <img src="https://img.shields.io/static/v1?label=&message=RLVR&color=9A8A58&style=flat-square" alt="RLVR"> <img src="https://img.shields.io/static/v1?label=&message=Safety&color=9A6F7F&style=flat-square" alt="Safety">
-- [[arXiv 2025](https://arxiv.org/abs/2501.12948)] DeepSeek-R1: RL Alone Incentivizes Sophisticated Reasoning <br>
+- 🌟 [[Nature 2025](https://arxiv.org/abs/2501.12948)] DeepSeek-R1: Incentivizing Reasoning in LLMs via Reinforcement Learning [[Code](https://github.com/deepseek-ai/DeepSeek-R1)] <br>
   <img src="https://img.shields.io/static/v1?label=&message=RLVR&color=9A8A58&style=flat-square" alt="RLVR"> <img src="https://img.shields.io/static/v1?label=&message=Foundation&color=9A8A58&style=flat-square" alt="Foundation">
 
 ### Self-Play and Continual Improvement
 
 #### 2026
-- [[arXiv 2026](https://arxiv.org/abs/2602.04567)] Evo-MedAgent: Evolutionary Self-Improvement for Medical Agents <br>
+- [[arXiv 2026](https://arxiv.org/abs/2604.14475)] Evo-MedAgent: Iterative Self-Improvement Beyond One-Shot Diagnosis <br>
   <img src="https://img.shields.io/static/v1?label=&message=Self-Play&color=8A735F&style=flat-square" alt="Self-Play"> <img src="https://img.shields.io/static/v1?label=&message=Evolution&color=6F8F72&style=flat-square" alt="Evolution">
 
 #### 2024
-- 🌟 [[arXiv 2024](https://arxiv.org/abs/2405.02957)] Agent Hospital: Simulated Training via Synthetic Patient Cases [[Code](https://github.com/tsinghua-fib-lab/Agent-Hospital)] <br>
+- [[arXiv 2024](https://arxiv.org/abs/2405.02957)] Agent Hospital: Simulated Training via Synthetic Patient Cases <br>
   <img src="https://img.shields.io/static/v1?label=&message=Self-Play&color=8A735F&style=flat-square" alt="Self-Play"> <img src="https://img.shields.io/static/v1?label=&message=Simulation&color=5F8791&style=flat-square" alt="Simulation">
 
 ### Environment Scaling
 > Amplifying agent capability by enriching the tool and data environment rather than solely scaling model parameters.
 
 #### 2026
-- [[arXiv 2026](https://arxiv.org/abs/2603.12345)] EnvScaler: Systematic Expansion of Tool-Interactive Environments <br>
-  <img src="https://img.shields.io/static/v1?label=&message=Env%20Scaling&color=6B7280&style=flat-square" alt="Env Scaling">
-- [[arXiv 2026](https://arxiv.org/abs/2604.12345)] Agent-World: Scalable Real-World Environment Synthesis <br>
+- 🌟 [[arXiv 2026](https://arxiv.org/abs/2601.05808)] EnvScaler: Systematic Expansion of Tool-Interactive Environments [[Code](https://github.com/RUC-NLPIR/EnvScaler)] <br>
   <img src="https://img.shields.io/static/v1?label=&message=Env%20Scaling&color=6B7280&style=flat-square" alt="Env Scaling">
 
 #### 2025
-- [[arXiv 2025](https://arxiv.org/abs/2502.12345)] Towards Environment Scaling for Agent Capability Amplification <br>
-  <img src="https://img.shields.io/static/v1?label=&message=Env%20Scaling&color=6B7280&style=flat-square" alt="Env Scaling"> <img src="https://img.shields.io/static/v1?label=&message=Theory&color=5F6F89&style=flat-square" alt="Theory">
-- [[arXiv 2025](https://arxiv.org/abs/2504.12345)] MCP for Healthcare: Standardized Tool Interfaces for Clinical Agents <br>
-  <img src="https://img.shields.io/static/v1?label=&message=Env%20Scaling&color=6B7280&style=flat-square" alt="Env Scaling"> <img src="https://img.shields.io/static/v1?label=&message=MCP&color=4F6F73&style=flat-square" alt="MCP">
+- 🌟 [[ICLR 2026](https://arxiv.org/abs/2506.04405)] MedAgentGym: Scalable Agentic Training Environment for Biomedical Data Science [[Code](https://github.com/wshi83/MedAgentGym)] <br>
+  <img src="https://img.shields.io/static/v1?label=&message=Env%20Scaling&color=6B7280&style=flat-square" alt="Env Scaling"> <img src="https://img.shields.io/static/v1?label=&message=Training&color=9A7B5F&style=flat-square" alt="Training">
 
 ---
 
@@ -385,35 +369,33 @@ Overall, this structure follows the lifecycle of a medical imaging agent:
 ### Radiology
 
 #### 2026
-- 🌟 [[arXiv 2026](https://arxiv.org/abs/2603.24649)] MedOpenClaw: Auditable VLM Agent for 3D Slicer [[Code](https://github.com/MedOpenClaw/medopenclaw)] <br>
+- [[arXiv 2026](https://arxiv.org/abs/2603.24649)] MedOpenClaw: Auditable VLM Agent for 3D Slicer <br>
   <img src="https://img.shields.io/static/v1?label=&message=Radiology&color=5F8A75&style=flat-square" alt="Radiology"> <img src="https://img.shields.io/static/v1?label=&message=3D&color=4F6F73&style=flat-square" alt="3D">
 - [[ACL 2026](https://arxiv.org/abs/2604.16175)] MARCH: Multiagent CT Report Generation <br>
   <img src="https://img.shields.io/static/v1?label=&message=Radiology&color=5F8A75&style=flat-square" alt="Radiology"> <img src="https://img.shields.io/static/v1?label=&message=Report%20Gen&color=6B7280&style=flat-square" alt="Report Gen">
-- 🌟 [[arXiv 2026](https://arxiv.org/abs/2604.15231)] RadAgent: Autonomous Workflow Management [[Code](https://github.com/eth-medical-ai-lab/rad-agent)] <br>
+- 🌟 [[arXiv 2026](https://arxiv.org/abs/2604.15231)] RadAgent: Autonomous Radiology Workflow Management [[Code](https://github.com/eth-medical-ai-lab/rad-agent)] <br>
   <img src="https://img.shields.io/static/v1?label=&message=Radiology&color=5F8A75&style=flat-square" alt="Radiology"> <img src="https://img.shields.io/static/v1?label=&message=Workflow&color=9A7F55&style=flat-square" alt="Workflow">
 - [[arXiv 2026](https://arxiv.org/abs/2604.16729)] Agentic Neuro-Radiology: Training-Free Brain MRI Pipeline <br>
   <img src="https://img.shields.io/static/v1?label=&message=Radiology&color=5F8A75&style=flat-square" alt="Radiology"> <img src="https://img.shields.io/static/v1?label=&message=Neurology&color=9B6B6B&style=flat-square" alt="Neurology">
 
 #### 2025
-- 🌟 [[ICML 2025](https://arxiv.org/abs/2502.02673)] MedRAX: Tool Orchestration for CXR Analysis [[Code](https://github.com/bowang-lab/medrax)] <br>
+- 🌟 [[ICML 2025](https://arxiv.org/abs/2502.02673)] MedRAX: Tool Orchestration for CXR Analysis [[Code](https://github.com/bowang-lab/MedRAX)] <br>
   <img src="https://img.shields.io/static/v1?label=&message=Radiology&color=5F8A75&style=flat-square" alt="Radiology"> <img src="https://img.shields.io/static/v1?label=&message=CXR&color=6B8F8F&style=flat-square" alt="CXR">
 - 🌟 [[ICLR 2026](https://arxiv.org/abs/2503.18968)] MedAgent-Pro: Evidence-Based Multimodal Diagnosis [[Code](https://github.com/jinlab-imvr/MedAgent-Pro)] <br>
   <img src="https://img.shields.io/static/v1?label=&message=Radiology&color=5F8A75&style=flat-square" alt="Radiology"> <img src="https://img.shields.io/static/v1?label=&message=Evidence&color=6F8F72&style=flat-square" alt="Evidence">
-- [[arXiv 2025](https://arxiv.org/abs/2505.16229)] CT-Agent: 3D CT Radiology QA via Multimodal LLM Agent <br>
-  <img src="https://img.shields.io/static/v1?label=&message=Radiology&color=5F8A75&style=flat-square" alt="Radiology"> <img src="https://img.shields.io/static/v1?label=&message=3D&color=4F6F73&style=flat-square" alt="3D">
 - 🌟 [[arXiv 2025](https://arxiv.org/abs/2510.21324)] CXR-Agent: Automated Chest Radiograph Interpretation [[Code](https://github.com/laojiahuo2003/CXRAgent)] <br>
   <img src="https://img.shields.io/static/v1?label=&message=Radiology&color=5F8A75&style=flat-square" alt="Radiology"> <img src="https://img.shields.io/static/v1?label=&message=CXR&color=6B8F8F&style=flat-square" alt="CXR">
 
 ### Pathology
 
 #### 2025
-- 🌟 [[arXiv 2025](https://arxiv.org/abs/2511.17052)] PathAgent: Navigator-Perceptor-Executor Loop for WSI [[Code](https://github.com/WonderLandxD/PathAgent)] <br>
+- 🌟 [[arXiv 2025](https://arxiv.org/abs/2511.17052)] PathAgent: Navigator-Perceptor-Executor Loop for WSI [[Code](https://github.com/G14nTDo4/PathAgent)] <br>
   <img src="https://img.shields.io/static/v1?label=&message=Pathology&color=9B6B6B&style=flat-square" alt="Pathology"> <img src="https://img.shields.io/static/v1?label=&message=WSI&color=5F8791&style=flat-square" alt="WSI">
-- 🌟 [[ICCV 2025](https://arxiv.org/abs/2502.08916)] PathFinder: Interactive Multiagent WSI Search [[Code](https://github.com/mahmoodlab/PathFinder)] <br>
+- [[ICCV 2025](https://arxiv.org/abs/2502.08916)] PathFinder: Interactive Multiagent WSI Search <br>
   <img src="https://img.shields.io/static/v1?label=&message=Pathology&color=9B6B6B&style=flat-square" alt="Pathology"> <img src="https://img.shields.io/static/v1?label=&message=Multi-Agent&color=9A7682&style=flat-square" alt="Multi-Agent">
-- 🌟 [[MICCAI 2025](https://arxiv.org/abs/2507.14680)] WSI-Agents: Coordinated Multiagent WSI Analysis [[Code](https://github.com/CVI-SZU/WSI-Agents)] <br>
+- 🌟 [[MICCAI 2025](https://arxiv.org/abs/2507.14680)] WSI-Agents: Collaborative Multiagent WSI Analysis [[Code](https://github.com/CVI-SZU/WSI-Agents)] <br>
   <img src="https://img.shields.io/static/v1?label=&message=Pathology&color=9B6B6B&style=flat-square" alt="Pathology"> <img src="https://img.shields.io/static/v1?label=&message=Multi-Agent&color=9A7682&style=flat-square" alt="Multi-Agent">
-- 🌟 [[arXiv 2025](https://arxiv.org/abs/2503.09876)] TissueLab: Agentic Tissue Analysis Environment [[Code](https://github.com/LMD0311/TissueLab)] <br>
+- 🌟 [[arXiv 2025](https://arxiv.org/abs/2509.20279)] TissueLab: Agentic Tissue Analysis Environment [[Code](https://github.com/zhihuanglab/TissueLab-SDK)] <br>
   <img src="https://img.shields.io/static/v1?label=&message=Pathology&color=9B6B6B&style=flat-square" alt="Pathology"> <img src="https://img.shields.io/static/v1?label=&message=AutoML&color=6B7280&style=flat-square" alt="AutoML">
 
 ### Ophthalmology
@@ -421,7 +403,7 @@ Overall, this structure follows the lifecycle of a medical imaging agent:
 #### 2025
 - [[arXiv 2025](https://arxiv.org/abs/2511.09394)] EyeAgent: 53-Tool Agent Across 23 Imaging Modalities <br>
   <img src="https://img.shields.io/static/v1?label=&message=Ophthalmology&color=9A7682&style=flat-square" alt="Ophthalmology"> <img src="https://img.shields.io/static/v1?label=&message=Env%20Scaling&color=6B7280&style=flat-square" alt="Env Scaling">
-- 🌟 [[arXiv 2025](https://arxiv.org/abs/2504.01234)] EyecareGPT: Multimodal LLM for Ophthalmic Imaging [[Code](https://github.com/dcdmllm/eyecaregpt)] <br>
+- 🌟 [[arXiv 2025](https://arxiv.org/abs/2504.13650)] EyecareGPT: Multimodal LLM for Ophthalmic Imaging [[Code](https://github.com/dcdmllm/eyecaregpt)] <br>
   <img src="https://img.shields.io/static/v1?label=&message=Ophthalmology&color=9A7682&style=flat-square" alt="Ophthalmology"> <img src="https://img.shields.io/static/v1?label=&message=Multimodal&color=5F8791&style=flat-square" alt="Multimodal">
 
 ### Oncology and Neurology
@@ -431,11 +413,11 @@ Overall, this structure follows the lifecycle of a medical imaging agent:
   <img src="https://img.shields.io/static/v1?label=&message=Neurology&color=9B6B6B&style=flat-square" alt="Neurology">
 
 #### 2025
-- [[npj DM 2025](https://www.nature.com/articles/s41746-025-01940-4)] CARE-AD: Multiagent Alzheimer's Prediction <br>
+- [[npj Digital Medicine 2025](https://www.nature.com/articles/s41746-025-01940-4)] CARE-AD: Multiagent Alzheimer's Prediction <br>
   <img src="https://img.shields.io/static/v1?label=&message=Neurology&color=9B6B6B&style=flat-square" alt="Neurology"> <img src="https://img.shields.io/static/v1?label=&message=Longitudinal&color=6B8F8F&style=flat-square" alt="Longitudinal">
 
 #### 2024
-- [[arXiv 2024](https://arxiv.org/abs/2403.15678)] MAGDA: Guideline-Driven Cancer Diagnostic Assistance <br>
+- [[arXiv 2024](https://arxiv.org/abs/2409.06351)] MAGDA: Guideline-Driven Diagnostic Assistance <br>
   <img src="https://img.shields.io/static/v1?label=&message=Oncology&color=9A6F7F&style=flat-square" alt="Oncology"> <img src="https://img.shields.io/static/v1?label=&message=Guidelines&color=6F8F72&style=flat-square" alt="Guidelines">
 
 ### Crossmodal and Cross-Specialty
@@ -445,15 +427,17 @@ Overall, this structure follows the lifecycle of a medical imaging agent:
   <img src="https://img.shields.io/static/v1?label=&message=Crossmodal&color=5F8791&style=flat-square" alt="Crossmodal"> <img src="https://img.shields.io/static/v1?label=&message=Self-Evolving&color=8A735F&style=flat-square" alt="Self-Evolving">
 
 #### 2025
-- 🌟 [[arXiv 2025](https://arxiv.org/abs/2503.18968)] MedAgent-Pro: Evidence-Based Multimodal Diagnosis [[Code](https://github.com/jinlab-imvr/MedAgent-Pro)] <br>
+- 🌟 [[ICLR 2026](https://arxiv.org/abs/2503.18968)] MedAgent-Pro: Evidence-Based Multimodal Diagnosis [[Code](https://github.com/jinlab-imvr/MedAgent-Pro)] <br>
   <img src="https://img.shields.io/static/v1?label=&message=Crossmodal&color=5F8791&style=flat-square" alt="Crossmodal"> <img src="https://img.shields.io/static/v1?label=&message=Evidence&color=6F8F72&style=flat-square" alt="Evidence">
-- 🌟 [[arXiv 2025](https://arxiv.org/abs/2402.09345)] MMedAgent: Multimodal Medical Agent with Modality-Specific Tools [[Code](https://github.com/Wangyixinxin/MMedAgent)] <br>
+
+#### 2024
+- 🌟 [[ICLR 2025](https://arxiv.org/abs/2407.02483)] MMedAgent: Learning to Use Medical Tools with Multimodal Agent [[Code](https://github.com/Wangyixinxin/MMedAgent)] <br>
   <img src="https://img.shields.io/static/v1?label=&message=Crossmodal&color=5F8791&style=flat-square" alt="Crossmodal"> <img src="https://img.shields.io/static/v1?label=&message=Tool%20Library&color=9A8A58&style=flat-square" alt="Tool Library">
 
 ### Pharmacy and Clinical Decision
 
 #### 2025
-- 🌟 [[arXiv 2025](https://arxiv.org/abs/2503.12345)] TxAgent: Therapeutic Agent with Drug Interaction Reasoning [[Code](https://github.com/mims-harvard/TxAgent)] <br>
+- 🌟 [[arXiv 2025](https://arxiv.org/abs/2503.10970)] TxAgent: Therapeutic Reasoning Agent with Multi-Step Tool Use [[Code](https://github.com/mims-harvard/TxAgent)] <br>
   <img src="https://img.shields.io/static/v1?label=&message=Pharmacy&color=9A7F55&style=flat-square" alt="Pharmacy"> <img src="https://img.shields.io/static/v1?label=&message=Drug%20Safety&color=9A6F7F&style=flat-square" alt="Drug Safety">
 
 #### 2024
@@ -465,13 +449,13 @@ Overall, this structure follows the lifecycle of a medical imaging agent:
 ### Agent-Driven AutoML
 
 #### 2026
-- [[arXiv 2026](https://arxiv.org/abs/2602.04567)] Evo-MedAgent: Evolutionary Agent Self-Improvement <br>
+- [[arXiv 2026](https://arxiv.org/abs/2604.14475)] Evo-MedAgent: Evolutionary Agent Self-Improvement <br>
   <img src="https://img.shields.io/static/v1?label=&message=AutoML&color=6B7280&style=flat-square" alt="AutoML"> <img src="https://img.shields.io/static/v1?label=&message=Evolution&color=6F8F72&style=flat-square" alt="Evolution">
 
 #### 2025
 - 🌟 [[MICCAI 2025](https://arxiv.org/abs/2502.20301)] M3Builder: Automated Medical Model Building via Agent Pipeline [[Code](https://github.com/MAGIC-AI4Med/M3Builder)] <br>
   <img src="https://img.shields.io/static/v1?label=&message=AutoML&color=6B7280&style=flat-square" alt="AutoML"> <img src="https://img.shields.io/static/v1?label=&message=Pipeline&color=5F6F89&style=flat-square" alt="Pipeline">
-- 🌟 [[arXiv 2025](https://arxiv.org/abs/2504.05678)] MedAgentGym: Training Gymnasium for Medical Agents [[Code](https://github.com/wshi83/MedAgentGym)] <br>
+- 🌟 [[ICLR 2026](https://arxiv.org/abs/2506.04405)] MedAgentGym: Training Gymnasium for Medical Agents [[Code](https://github.com/wshi83/MedAgentGym)] <br>
   <img src="https://img.shields.io/static/v1?label=&message=AutoML&color=6B7280&style=flat-square" alt="AutoML"> <img src="https://img.shields.io/static/v1?label=&message=Training%20Env&color=5F8791&style=flat-square" alt="Training Env">
 
 ---
@@ -484,27 +468,27 @@ Overall, this structure follows the lifecycle of a medical imaging agent:
 
 | Benchmark | Level | Domain | Key Features |
 |---|---|---|---|
-| OmniMedVQA | Static | Multi-domain | 128K QA across 12 modalities |
-| GMAI-Bench | Static | Multi-domain | Comprehensive general medical AI |
-| EH-Bench | Static | Ophthalmology | Hallucination evaluation |
+| OmniMedVQA | Static | Multi-domain | 118K images across 12 modalities |
+| MedXpertQA | Static | Multi-domain | Expert-level text + multimodal reasoning |
+| MedHallu | Static | Multi-domain | Medical hallucination detection |
 | AgentClinic | Sequential | Clinical sim. | Multi-turn diagnostic interactions |
-| ClinicalBench | Sequential | Multi-domain | Clinical reasoning coherence |
-| MedAgentBench | System | Multi-domain | NEJM AI; tool use + multistep execution |
-| MedAgentBoard | System | Multi-domain | Unified evaluation dashboard |
-| 3MDBench | System | Multi-domain | 3D medical data agent evaluation |
-| MedAgentAudit | System | Multi-domain | Safety and reliability audit |
+| MedAgentsBench | Sequential | Multi-domain | Hard multistep clinical reasoning |
+| MedAgentBench | System | Multi-domain | FHIR virtual EHR; tool use + execution |
+| MedAgentBoard | System | Multi-domain | Multiagent vs single-LLM comparison |
+| 3MDBench | System | Multi-domain | Multimodal doctor–patient dialogue |
+| MedAgentAudit | System | Multi-domain | Collaborative failure-mode audit |
 
 #### 2025–2026
 
-- 🌟 [[NeurIPS 2025](https://arxiv.org/abs/2505.12371)] MedAgentBoard: Unified Evaluation Board for Medical Agents [[Code](https://github.com/yhzhu99/medagentboard)] <br>
+- 🌟 [[NeurIPS 2025](https://arxiv.org/abs/2505.12371)] MedAgentBoard: Multiagent vs Single-LLM Evaluation Across Clinical Tasks [[Code](https://github.com/yhzhu99/medagentboard)] <br>
   <img src="https://img.shields.io/static/v1?label=&message=Benchmark&color=9A7F55&style=flat-square" alt="Benchmark"> <img src="https://img.shields.io/static/v1?label=&message=System-Level&color=5F8791&style=flat-square" alt="System-Level">
-- 🌟 [[NEJM AI 2025](https://arxiv.org/abs/2501.14654)] MedAgentBench: Evaluating Medical LLM Agent Workflows [[Code](https://github.com/stanfordmlgroup/medagentbench)] <br>
+- 🌟 [[arXiv 2025](https://arxiv.org/abs/2501.14654)] MedAgentBench: Evaluating Medical LLM Agent Workflows on Virtual EHR [[Code](https://github.com/stanfordmlgroup/medagentbench)] <br>
   <img src="https://img.shields.io/static/v1?label=&message=Benchmark&color=9A7F55&style=flat-square" alt="Benchmark"> <img src="https://img.shields.io/static/v1?label=&message=System-Level&color=5F8791&style=flat-square" alt="System-Level">
-- 🌟 [[arXiv 2025](https://arxiv.org/abs/2405.07960)] AgentClinic: Multimodal Agent Benchmark in Simulated Clinical Environment [[Code](https://github.com/SamuelSchmidgall/AgentClinic)] <br>
+- 🌟 [[ICLR 2025](https://arxiv.org/abs/2405.07960)] AgentClinic: Multimodal Agent Benchmark in Simulated Clinical Environments [[Code](https://github.com/SamuelSchmidgall/AgentClinic)] <br>
   <img src="https://img.shields.io/static/v1?label=&message=Benchmark&color=9A7F55&style=flat-square" alt="Benchmark"> <img src="https://img.shields.io/static/v1?label=&message=Sequential&color=6B8F8F&style=flat-square" alt="Sequential">
-- 🌟 [[arXiv 2025](https://arxiv.org/abs/2504.05678)] MedAgentGym: Standardized Training Gymnasium [[Code](https://github.com/wshi83/MedAgentGym)] <br>
+- 🌟 [[ICLR 2026](https://arxiv.org/abs/2506.04405)] MedAgentGym: Standardized Training and Evaluation Gymnasium [[Code](https://github.com/wshi83/MedAgentGym)] <br>
   <img src="https://img.shields.io/static/v1?label=&message=Benchmark&color=9A7F55&style=flat-square" alt="Benchmark"> <img src="https://img.shields.io/static/v1?label=&message=Training&color=9A7B5F&style=flat-square" alt="Training">
-- 🌟 [[arXiv 2025](https://arxiv.org/abs/2505.09876)] MedAgentAudit: Agent Safety and Reliability Audit [[Code](https://github.com/yhzhu99/MedAgentAudit)] <br>
+- 🌟 [[arXiv 2025](https://arxiv.org/abs/2510.10185)] MedAgentAudit: Agent Safety and Reliability Audit [[Code](https://github.com/MedX-PKU/MedAgentAudit)] <br>
   <img src="https://img.shields.io/static/v1?label=&message=Benchmark&color=9A7F55&style=flat-square" alt="Benchmark"> <img src="https://img.shields.io/static/v1?label=&message=Safety&color=9A6F7F&style=flat-square" alt="Safety">
 
 ### Evaluation Metrics Beyond Accuracy
@@ -579,20 +563,20 @@ Overall, this structure follows the lifecycle of a medical imaging agent:
 |---|---|---|
 | [LLaVA-Med](https://github.com/microsoft/LLaVA-Med) | Model | Open medical VQA model |
 | [CheXagent](https://github.com/Stanford-AIMI/CheXagent) | Model + Data | Chest X-ray agent |
-| [MedAgent-Zero](https://github.com/tang-agui/MedAgent-Zero) | Framework | Zero-shot agent toolkit |
+| [MedRAX](https://github.com/bowang-lab/MedRAX) | Framework | Tool orchestration for CXR |
+| [MedAgent-Pro](https://github.com/jinlab-imvr/MedAgent-Pro) | Framework | Evidence-based multimodal diagnosis |
 | [AutoGen](https://github.com/microsoft/autogen) | Framework | Multi-agent orchestration |
 | [MetaGPT](https://github.com/geekan/MetaGPT) | Framework | Multi-agent programming |
 | [AgentClinic](https://github.com/SamuelSchmidgall/AgentClinic) | Benchmark | Clinical agent evaluation |
 | [MedAgentGym](https://github.com/wshi83/MedAgentGym) | Framework | Agent training gymnasium |
-| [MedRAX](https://github.com/bowang-lab/medrax) | Framework | Tool orchestration for CXR |
-| [MedOpenClaw](https://github.com/MedOpenClaw/medopenclaw) | Framework | Auditable 3D Slicer agent |
+| [TxAgent](https://github.com/mims-harvard/TxAgent) | Framework | Therapeutic reasoning agent |
 | [Awesome-AI-Agents-for-Healthcare](https://github.com/AgenticHealthAI/Awesome-AI-Agents-for-Healthcare) | List | Related awesome list |
 
 ---
 
 ## Related Surveys
 
-- [A Comprehensive Survey on Medical Imaging Agents (2026)](https://arxiv.org/) — Our accompanying survey paper
+- [A Survey of LLM-based Agents in Medicine: How far are we from Baymax? (2025)](https://arxiv.org/abs/2502.11211) — LLM medical agent survey
 - [Awesome-AI-Agents-for-Healthcare](https://github.com/AgenticHealthAI/Awesome-AI-Agents-for-Healthcare) — Broader healthcare agent list
 - [Awesome-Multimodal-in-Medical-Imaging](https://github.com/richard-peng-xia/awesome-multimodal-in-medical-imaging) — Multimodal medical imaging resources
 
