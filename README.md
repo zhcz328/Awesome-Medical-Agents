@@ -1,7 +1,7 @@
 <h1 align="center">Awesome-Medical-Imaging-Agents</h1>
 
 <p align="center">
-  <a href="#"><img src="https://img.shields.io/badge/Survey%20Paper-Coming%20soon-blue" alt="Survey Paper"></a>
+  <a href="https://arxiv.org/pdf/2607.11175v1"><img src="https://img.shields.io/badge/Survey%20Paper-arXiv-blue" alt="Survey Paper"></a>
   <a href="https://github.com/sindresorhus/awesome"><img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="Awesome"></a>
   <a href="https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity"><img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" alt="Maintenance"></a>
   <a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat" alt="PRs Welcome"></a>
@@ -11,6 +11,10 @@
   A curated reading list on <b>medical imaging agents: from passive models to autonomous clinical systems</b>.
   <br>
   Medical imaging agents integrate perception, reasoning, planning, memory, tool use, and self-reflection into autonomous clinical workflows.
+</p>
+
+<p align="center">
+  <img src="figures/首页图.png" alt="Survey overview: scaling medical agents from assistance to autonomy" width="720">
 </p>
 
 ---
@@ -243,6 +247,10 @@ Overall, this structure follows the lifecycle of a medical imaging agent:
 
 ## Architecture Paradigms
 
+<p align="center">
+  <img src="figures/fig4_architectures_topologies1.png" alt="Architecture paradigms and topologies for medical imaging agents" width="900">
+</p>
+
 ### Single-Agent Tool-Augmented
 > One LLM controller orchestrates a suite of external tools. Benefits directly from environment scaling.
 
@@ -302,6 +310,10 @@ Overall, this structure follows the lifecycle of a medical imaging agent:
 ---
 
 ## Training Strategies and Scaling
+
+<p align="center">
+  <img src="figures/fig5_training_16_921.png" alt="Training strategies and scaling paths for medical imaging agents" width="900">
+</p>
 
 ### Prompting and In-Context Learning
 
@@ -365,6 +377,10 @@ Overall, this structure follows the lifecycle of a medical imaging agent:
 ---
 
 ## Clinical Applications
+
+<p align="center">
+  <img src="figures/applications.png" alt="Clinical application landscape for medical imaging agents" width="900">
+</p>
 
 ### Radiology
 
@@ -461,6 +477,10 @@ Overall, this structure follows the lifecycle of a medical imaging agent:
 ---
 
 ## Benchmarks and Evaluation
+
+<p align="center">
+  <img src="figures/fig7_benchmarks_taxonomy3.png" alt="Benchmark taxonomy for evaluating medical imaging agents" width="900">
+</p>
 
 ### Agent-Specific Benchmarks
 
