@@ -1,4 +1,4 @@
-<h1 align="center">Awesome-Medical-Imaging-Agents</h1>
+<h1 align="center">Awesome-Medical-Agents</h1>
 
 <p align="center">
   <a href="https://arxiv.org/pdf/2607.11175v1"><img src="https://img.shields.io/badge/Survey%20Paper-arXiv-blue" alt="Survey Paper"></a>
@@ -8,9 +8,9 @@
 </p>
 
 <p align="center">
-  A curated reading list on <b>medical imaging agents: from passive models to autonomous clinical systems</b>.
+  A curated reading list on <b>medical agents: scaling clinical systems from assistance to autonomy</b>.
   <br>
-  Medical imaging agents integrate perception, reasoning, planning, memory, tool use, and self-reflection into autonomous clinical workflows.
+  Medical agents integrate perception, reasoning, planning, memory, tool use, and self-reflection into trustworthy clinical workflows.
 </p>
 
 <p align="center">
@@ -20,7 +20,7 @@
 ---
 
 <p align="center">
-  <a href="#what-are-medical-imaging-agents">What are Medical Imaging Agents?</a> ·
+  <a href="#what-are-medical-agents">What are Medical Agents?</a> ·
   <a href="#why-agents-matter-now">Why Agents Matter Now?</a> ·
   <a href="#repository-map">Repository Map</a> ·
   <a href="#table-of-contents">Table of Contents</a>
@@ -30,11 +30,11 @@ Papers with publicly released code or project resources include an inline `[[Cod
 
 > Contributions are welcome. If you find missing papers, inaccurate classifications, or newly released code, feel free to update this list.
 
-## What are Medical Imaging Agents?
+## What are Medical Agents?
 
-In the context of clinical AI, a **medical imaging agent** is a computational system that moves beyond static, single-pass inference to interact dynamically with clinical environments. Unlike traditional foundation models that map inputs to outputs, agents actively decompose complex clinical tasks, invoke specialized tools, maintain contextual memory, and iteratively refine their decisions based on intermediate feedback.
+In the context of clinical AI, a **medical agent** is a computational system that moves beyond static, single-pass inference to interact dynamically with clinical environments. Unlike traditional foundation models that map inputs to outputs, agents actively decompose complex clinical tasks, invoke specialized tools, maintain contextual memory, and iteratively refine their decisions based on intermediate feedback.
 
-A medical imaging agent is formally defined as $\mathcal{A} = (\mathcal{P}, \mathcal{R}, \mathcal{L}, \mathcal{M}, \mathcal{T}, \mathcal{F})$, composed of six functional modules:
+A medical agent is formally defined as $\mathcal{A} = (\mathcal{P}, \mathcal{R}, \mathcal{L}, \mathcal{M}, \mathcal{T}, \mathcal{F})$, composed of six functional modules:
 
 | Module | Function | Clinical Role |
 |---|---|---|
@@ -46,6 +46,8 @@ A medical imaging agent is formally defined as $\mathcal{A} = (\mathcal{P}, \mat
 | **Action Reflection** $\mathcal{F}$ | Self-evaluation and iterative improvement | Error correction and quality assurance |
 
 ## Why Agents Matter Now
+
+This repository follows the survey **The Path to Self-Evolving Clinical Systems: Scaling Medical Agents from Assistance to Autonomy**. Its organizing principle is deployment-first: before an agent can be trusted in practice, it must handle real clinical scenarios, contamination-resistant benchmarks, and interactive training environments.
 
 The transition from passive models to autonomous agents is driven by four converging factors:
 
@@ -68,6 +70,18 @@ The transition from passive models to autonomous agents is driven by four conver
 | **L2** | Cooperative | Agent proactively decomposes tasks within human-in-the-loop framework | MDAgents, MedAgent-Pro |
 | **L3** | Fully Autonomous | End-to-end workflows with minimal oversight and exception-based escalation | RadAgent, Agent Hospital |
 
+## Scaling Spine
+
+Following the survey, we organize the field around a single **scaling spine**:
+
+| Axis | Focus | Why it matters |
+|---|---|---|
+| **Framework Scaling** | Architecture paradigms, tool orchestration, and multi-agent topologies | Determines how agents coordinate reasoning and action |
+| **Capability Scaling** | The harness-driven loop from perception to action | Turns isolated modules into closed clinical workflows |
+| **Environment Scaling** | Rich tool, data, PACS, EHR, FHIR, and clinical gym ecosystems | Expands what agents can do without relying only on larger models |
+
+The long-term destination is **clinical self-evolution**: agents that improve through interaction with environments, consolidate successful workflows, and adapt to new clinical distributions under rigorous governance.
+
 ## Paradigm Shift: Foundation Models → Agent Systems
 
 | Characteristic | Foundation Models | Agent Systems |
@@ -81,7 +95,7 @@ The transition from passive models to autonomous agents is driven by four conver
 
 ## Repository Map
 
-This repository is organized as a **conceptual map** of medical imaging agent research. We group papers by their role in the agent pipeline.
+This repository is organized as a **conceptual map** of medical agent research. We group papers by their role in the agent pipeline.
 
 | Section | Role in the repository |
 |---|---|
@@ -92,7 +106,7 @@ This repository is organized as a **conceptual map** of medical imaging agent re
 | **Benchmarks & Evaluation** | Static, sequential, and system-level evaluation frameworks |
 | **Deployment & Governance** | Clinical integration, interoperability standards, and regulatory pathways |
 
-Overall, this structure follows the lifecycle of a medical imaging agent:
+Overall, this structure follows the lifecycle of a medical agent:
 
 **Perceive → Reason → Plan → Remember → Use Tools → Reflect → Deploy**
 
@@ -248,7 +262,7 @@ Overall, this structure follows the lifecycle of a medical imaging agent:
 ## Architecture Paradigms
 
 <p align="center">
-  <img src="figures/fig4_architectures_topologies1.png" alt="Architecture paradigms and topologies for medical imaging agents" width="900">
+  <img src="figures/fig4_architectures_topologies1.png" alt="Architecture paradigms and topologies for medical agents" width="900">
 </p>
 
 ### Single-Agent Tool-Augmented
@@ -312,7 +326,7 @@ Overall, this structure follows the lifecycle of a medical imaging agent:
 ## Training Strategies and Scaling
 
 <p align="center">
-  <img src="figures/fig5_training_16_921.png" alt="Training strategies and scaling paths for medical imaging agents" width="900">
+  <img src="figures/fig5_training_16_921.png" alt="Training strategies and scaling paths for medical agents" width="900">
 </p>
 
 ### Prompting and In-Context Learning
@@ -379,7 +393,7 @@ Overall, this structure follows the lifecycle of a medical imaging agent:
 ## Clinical Applications
 
 <p align="center">
-  <img src="figures/applications.png" alt="Clinical application landscape for medical imaging agents" width="900">
+  <img src="figures/applications.png" alt="Clinical application landscape for medical agents" width="900">
 </p>
 
 ### Radiology
@@ -479,7 +493,7 @@ Overall, this structure follows the lifecycle of a medical imaging agent:
 ## Benchmarks and Evaluation
 
 <p align="center">
-  <img src="figures/fig7_benchmarks_taxonomy3.png" alt="Benchmark taxonomy for evaluating medical imaging agents" width="900">
+  <img src="figures/fig7_benchmarks_taxonomy3.png" alt="Benchmark taxonomy for evaluating medical agents" width="900">
 </p>
 
 ### Agent-Specific Benchmarks
@@ -613,11 +627,12 @@ This project is licensed under the MIT License - see the [LICENSE](./LICENSE) fi
 ## Citation
 
 ```bibtex
-@article{medimaging_agents_survey_2026,
-  title={Medical Imaging Agents: A Comprehensive Survey from Passive Models to Autonomous Clinical Systems},
-  author={Authors},
-  journal={arXiv preprint},
-  year={2026}
+@article{zhu2026path,
+  title={The Path to Self-Evolving Clinical Systems: Scaling Medical Agents from Assistance to Autonomy},
+  author={Zhu, Chunzheng and Tian, Lei and Tan, Bohan and Zhou, Ziqi and Sun, Yuxuan and Wang, Yijun and Lv, Chengchao and Wen, Yilin and He, Yijun and Lin, Jinghao and Chen, Yihang and Tan, Cheewei and Wei, Qianshan and Zhao, Lei and Pu, Bin and Li, Kenli and Xue, Yuan and Lin, Jianxin},
+  journal={arXiv preprint arXiv:2607.11175},
+  year={2026},
+  url={https://arxiv.org/abs/2607.11175}
 }
 ```
 
