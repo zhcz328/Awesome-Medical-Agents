@@ -498,32 +498,80 @@ Overall, this structure follows the lifecycle of a medical agent:
 
 ### Agent-Specific Benchmarks
 
-> Three evaluation levels: static (individual capabilities), sequential (multistep processes), and system-level (end-to-end workflows).
+> Three evaluation levels: static single capabilities, tool-augmented and interactive agency, and system-level clinical operation. The catalog below follows the survey's readiness taxonomy and includes paper, data, or code links where available.
 
-| Benchmark | Level | Domain | Key Features |
-|---|---|---|---|
-| OmniMedVQA | Static | Multi-domain | 118K images across 12 modalities |
-| MedXpertQA | Static | Multi-domain | Expert-level text + multimodal reasoning |
-| MedHallu | Static | Multi-domain | Medical hallucination detection |
-| AgentClinic | Sequential | Clinical sim. | Multi-turn diagnostic interactions |
-| MedAgentsBench | Sequential | Multi-domain | Hard multistep clinical reasoning |
-| MedAgentBench | System | Multi-domain | FHIR virtual EHR; tool use + execution |
-| MedAgentBoard | System | Multi-domain | Multiagent vs single-LLM comparison |
-| 3MDBench | System | Multi-domain | Multimodal doctor–patient dialogue |
-| MedAgentAudit | System | Multi-domain | Collaborative failure-mode audit |
+#### Level 1: Isolated Single Capabilities
 
-#### 2025–2026
+| Year | Benchmark | What it tests | Paper | Data / Code |
+|---|---|---|---|---|
+| 2018 | VQA-RAD | Clinician-generated radiology VQA | [Paper](https://www.nature.com/articles/sdata2018251) | [Data](https://huggingface.co/datasets/flaviagiammarino/vqa-rad) |
+| 2019 | PubMedQA | Biomedical yes/no/maybe reasoning over abstracts | [Paper](https://arxiv.org/abs/1909.06146) | [Data](https://huggingface.co/datasets/qiaojin/PubMedQA) |
+| 2020 | PathVQA | Pathology VQA with 32K questions over 5K images | [Paper](https://arxiv.org/abs/2003.10286) | [Data](https://huggingface.co/datasets/flaviagiammarino/path-vqa) |
+| 2021 | MedQA | Medical licensing exam QA | [Paper](https://arxiv.org/abs/2009.13081) | [Data](https://huggingface.co/datasets/GBaker/MedQA-USMLE-4-options) |
+| 2021 | SLAKE | Bilingual knowledge-enhanced radiology VQA | [Paper](https://arxiv.org/abs/2102.09542) | [Data](https://huggingface.co/datasets/mdwiratathya/SLAKE-vqa-english) |
+| 2022 | MedMCQA | Multi-subject medical multiple-choice QA | [Paper](https://arxiv.org/abs/2203.14371) | [Data](https://huggingface.co/datasets/openlifescienceai/medmcqa) |
+| 2022 | MS-CXR | Radiologist phrase grounding boxes for CXR | [Paper](https://arxiv.org/abs/2204.09817) | [Data](https://physionet.org/content/ms-cxr) |
+| 2023 | ReXVal | Radiologist error annotations for report evaluation | [Paper](https://physionet.org/content/rexval-dataset/1.0.0/) | [Data](https://physionet.org/content/rexval-dataset) |
+| 2024 | CheXbench | Chest X-ray perception and report understanding | [Paper](https://arxiv.org/abs/2401.12208) | [Code](https://github.com/Stanford-AIMI/CheXagent) |
+| 2024 | OmniMedVQA | Large-scale medical VQA across 12 modalities | [Paper](https://arxiv.org/abs/2402.09181) | [Data](https://huggingface.co/datasets/foreverbeliever/OmniMedVQA) |
+| 2024 | MedSafetyBench | Medical safety benchmark with harmful requests | [Paper](https://arxiv.org/abs/2403.03744) | [Code](https://github.com/AI4LIFE-GROUP/med-safety-bench) |
+| 2024 | CARES | Medical LVLM trustworthiness across reliability dimensions | [Paper](https://arxiv.org/abs/2406.06007) | [Code](https://github.com/richard-peng-xia/CARES) |
+| 2024 | ClinicalBench | LLMs vs classical clinical prediction models | [Paper](https://arxiv.org/abs/2411.06469) | [Code](https://github.com/canyuchen/ClinicalBench) |
+| 2025 | MedXpertQA | Expert-level text and multimodal medical reasoning | [Paper](https://arxiv.org/abs/2501.18362) | [Data](https://huggingface.co/datasets/TsinghuaC3I/MedXpertQA) |
+| 2025 | MedHallu | Medical hallucination detection benchmark | [Paper](https://arxiv.org/abs/2502.14302) | [Data](https://huggingface.co/datasets/UTAustin-AIHealth/MedHallu) |
+| 2025 | HealthBench | Physician-rubric multiturn health conversations | [Paper](https://arxiv.org/abs/2505.08775) | [Data](https://huggingface.co/datasets/openai/healthbench) |
+| 2025 | MedReason | Knowledge-graph grounded medical reasoning chains | [Paper](https://arxiv.org/abs/2504.00993) | [Code](https://github.com/UCSC-VLAA/MedReason) |
+| 2025 | GEMeX | Grounded explainable chest X-ray VQA | [Paper](https://arxiv.org/abs/2411.16778) | [Data](https://www.med-vqa.com/GEMeX) |
+| 2026 | RADAR | 3D radiology report discrepancy review | [Paper](https://arxiv.org/abs/2603.06681) | - |
 
-- 🌟 [[NeurIPS 2025](https://arxiv.org/abs/2505.12371)] MedAgentBoard: Multiagent vs Single-LLM Evaluation Across Clinical Tasks [[Code](https://github.com/yhzhu99/medagentboard)] <br>
-  <img src="https://img.shields.io/static/v1?label=&message=Benchmark&color=9A7F55&style=flat-square" alt="Benchmark"> <img src="https://img.shields.io/static/v1?label=&message=System-Level&color=5F8791&style=flat-square" alt="System-Level">
-- 🌟 [[arXiv 2025](https://arxiv.org/abs/2501.14654)] MedAgentBench: Evaluating Medical LLM Agent Workflows on Virtual EHR [[Code](https://github.com/stanfordmlgroup/medagentbench)] <br>
-  <img src="https://img.shields.io/static/v1?label=&message=Benchmark&color=9A7F55&style=flat-square" alt="Benchmark"> <img src="https://img.shields.io/static/v1?label=&message=System-Level&color=5F8791&style=flat-square" alt="System-Level">
-- 🌟 [[ICLR 2025](https://arxiv.org/abs/2405.07960)] AgentClinic: Multimodal Agent Benchmark in Simulated Clinical Environments [[Code](https://github.com/SamuelSchmidgall/AgentClinic)] <br>
-  <img src="https://img.shields.io/static/v1?label=&message=Benchmark&color=9A7F55&style=flat-square" alt="Benchmark"> <img src="https://img.shields.io/static/v1?label=&message=Sequential&color=6B8F8F&style=flat-square" alt="Sequential">
-- 🌟 [[ICLR 2026](https://arxiv.org/abs/2506.04405)] MedAgentGym: Standardized Training and Evaluation Gymnasium [[Code](https://github.com/wshi83/MedAgentGym)] <br>
-  <img src="https://img.shields.io/static/v1?label=&message=Benchmark&color=9A7F55&style=flat-square" alt="Benchmark"> <img src="https://img.shields.io/static/v1?label=&message=Training&color=9A7B5F&style=flat-square" alt="Training">
-- 🌟 [[arXiv 2025](https://arxiv.org/abs/2510.10185)] MedAgentAudit: Agent Safety and Reliability Audit [[Code](https://github.com/MedX-PKU/MedAgentAudit)] <br>
-  <img src="https://img.shields.io/static/v1?label=&message=Benchmark&color=9A7F55&style=flat-square" alt="Benchmark"> <img src="https://img.shields.io/static/v1?label=&message=Safety&color=9A6F7F&style=flat-square" alt="Safety">
+#### Level 2: Tool-Augmented and Interactive Agency
+
+| Year | Benchmark | What it tests | Paper | Data / Code |
+|---|---|---|---|---|
+| 2024 | AgentClinic | Multimodal multiagent simulated clinical encounters | [Paper](https://arxiv.org/abs/2405.07960) | [Code](https://github.com/SamuelSchmidgall/AgentClinic) |
+| 2024 | MedCalc-Bench | Clinical calculator and medical computation | [Paper](https://arxiv.org/abs/2406.12036) | [Data](https://huggingface.co/datasets/ncbi/MedCalc-Bench-v1.0) |
+| 2024 | EHRNoteQA | QA over MIMIC-IV discharge summaries | [Paper](https://arxiv.org/abs/2402.16040) | [Data](https://physionet.org/content/ehr-notes-qa-llms) |
+| 2025 | MedAgentBench | FHIR-compliant virtual EHR agentic tasks | [Paper](https://arxiv.org/abs/2501.14654) | [Code](https://github.com/stanfordmlgroup/medagentbench) |
+| 2025 | MedR-Bench | Real-case medical reasoning quality | [Paper](https://arxiv.org/abs/2503.04691) | [Code](https://github.com/MAGIC-AI4Med/MedRBench) |
+| 2025 | MedAgentsBench | Hard multistep clinical reasoning | [Paper](https://arxiv.org/abs/2503.07459) | [Data](https://huggingface.co/datasets/super-dainiu/MedicalAgentsBench) |
+| 2025 | 3MDBench | Multimodal multiagent doctor-patient dialogue | [Paper](https://arxiv.org/abs/2504.13861) | [Data](https://huggingface.co/datasets/univanxx/3mdbench) |
+| 2025 | MedAgentBoard | Multiagent vs single-LLM clinical tasks | [Paper](https://arxiv.org/abs/2505.12371) | [Code](https://github.com/yhzhu99/medagentboard) |
+| 2025 | MedBrowseComp | Multihop medical web-browsing agents | [Paper](https://arxiv.org/abs/2505.14963) | [Data](https://huggingface.co/datasets/AIM-Harvard/MedBrowseComp) |
+| 2025 | BFCL | Live executable function and tool calling | [Paper](https://openreview.net/forum?id=2GmDdhBdDk) | [Data](https://huggingface.co/datasets/gorilla-llm/Berkeley-Function-Calling-Leaderboard) |
+| 2025 | MedOdyssey | Medical long-context reasoning up to 200K tokens | [Paper](https://arxiv.org/abs/2406.15019) | [Code](https://github.com/JOHNNY-fans/MedOdyssey) |
+| 2025 | LongHealth | Long fictional patient clinical documents | [Paper](https://arxiv.org/abs/2401.14490) | [Code](https://github.com/kbressem/LongHealth) |
+| 2025 | R2MED | Reasoning-based medical retrieval | [Paper](https://arxiv.org/abs/2505.14558) | [Code](https://github.com/R2MED/R2MED) |
+| 2025 | CURE-Bench | Therapeutic agent reasoning | [Paper](https://arxiv.org/abs/2512.11682) | [Code](https://github.com/mims-harvard/CURE-Bench) |
+| 2025 | MedAgentSim | Self-evolving multi-agent clinical simulation | [Paper](https://arxiv.org/abs/2503.22678) | [Code](https://github.com/MAXNORM8650/MedAgentSim) |
+| 2025 | PatientSim | Persona-driven patient simulation from MIMIC-IV | [Paper](https://arxiv.org/abs/2505.17818) | [Code](https://github.com/dek924/PatientSim) |
+| 2026 | MedDialogRubrics | Multiturn diagnostic consultation with rubrics | [Paper](https://arxiv.org/abs/2601.03023) | - |
+| 2026 | AgentRx | Single vs multi-agent multimodal clinical prediction | [Paper](https://arxiv.org/abs/2605.10286) | - |
+| 2026 | ABRA | Radiology agent with OHIF, Orthanc, and 21 tools | [Paper](https://arxiv.org/abs/2605.11224) | [Code](https://github.com/Luab/ABRA) |
+| 2026 | AutoMedBench | Workflow-aware autonomous medical AI research | [Paper](https://arxiv.org/abs/2606.01961) | [Code](https://github.com/automedbench/automedbench) |
+| 2026 | DeepMed | Medical deep-research agent with multi-hop search | [Paper](https://aclanthology.org/2026.findings-acl.904) | - |
+| 2026 | MedResearchBench | Medical research agents on clinical research tasks | [Paper](https://www.medrxiv.org/content/10.64898/2026.03.30.26349749v1) | - |
+| 2026 | EHRBench | EHR-grounded clinical decision making | [Paper](https://arxiv.org/abs/2605.30637) | - |
+
+#### Level 3: System-Level Clinical Operation
+
+| Year | Benchmark | What it tests | Paper | Data / Code |
+|---|---|---|---|---|
+| 2024 | EHRAgent | Code-empowered multitabular EHR reasoning | [Paper](https://arxiv.org/abs/2401.07128) | [Code](https://github.com/wshi83/EhrAgent) |
+| 2025 | ClinicalLab | Multidepartmental clinical benchmark | [Paper](https://arxiv.org/abs/2406.13890) | [Code](https://github.com/WeixiangYAN/ClinicalLab) |
+| 2025 | MedChain | Sequential clinical workflow benchmark | [Paper](https://arxiv.org/abs/2412.01605) | [Code](https://github.com/ljwztc/MedChain) |
+| 2025 | MedHELM | Holistic medical LLM evaluation | [Paper](https://arxiv.org/abs/2505.23802) | [Code](https://github.com/stanford-crfm/helm) |
+| 2025 | MedAgentGym | Code-based medical reasoning training environment | [Paper](https://arxiv.org/abs/2506.04405) | [Code](https://github.com/wshi83/MedAgentGym) |
+| 2025 | FHIR-AgentBench | HL7 FHIR interoperable EHR tasks | [Paper](https://arxiv.org/abs/2509.19319) | [Code](https://github.com/glee4810/FHIR-AgentBench) |
+| 2025 | MedAgentAudit | Collaborative failure-mode audit for multiagent systems | [Paper](https://arxiv.org/abs/2510.10185) | [Code](https://github.com/MedX-PKU/MedAgentAudit) |
+| 2026 | MedOpenClaw | Auditable full-study agents over clinical imaging | [Paper](https://arxiv.org/abs/2603.24649) | - |
+| 2026 | MedFlowBench | Imaging viewer workflows for radiology and pathology | [Paper](https://arxiv.org/abs/2603.24649) | - |
+| 2026 | PhysicianBench | Real-EHR long-horizon tasks with grounded checkpoints | [Paper](https://arxiv.org/abs/2605.02240) | [Code](https://github.com/HealthRex/PhysicianBench) |
+| 2026 | CHI-Bench | Long-horizon healthcare workflow automation | [Paper](https://arxiv.org/abs/2605.16679) | [Code](https://github.com/actava-ai/chi-bench) |
+| 2026 | MedCase-Structured | Text-to-FHIR reasoning over structured EHR | [Paper](https://arxiv.org/abs/2605.30295) | [Data](https://huggingface.co/datasets/system-technologies/MedCase-Structured) |
+| 2026 | ClinEnv | Interactive long-horizon inpatient EHR simulation | [Paper](https://arxiv.org/abs/2606.02568) | - |
+| 2026 | HealthAdminBench | Computer-use agents for healthcare administration | [Paper](https://arxiv.org/abs/2604.09937) | [Code](https://github.com/som-shahlab/health-admin-bench) |
+| 2026 | HealthAgentBench | Agentic healthcare tasks across patient-journey environments | [Paper](https://arxiv.org/abs/2606.31179) | [Project](https://microsoft.github.io/HealthAgentBench) |
+| 2026 | EHR-Complex | Interactive clinical database reasoning on MIMIC-IV | [Paper](https://arxiv.org/abs/2606.23301) | - |
 
 ### Evaluation Metrics Beyond Accuracy
 
