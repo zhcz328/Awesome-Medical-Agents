@@ -143,6 +143,7 @@ Overall, this structure follows the lifecycle of a medical agent:
   - [Crossmodal and Cross-Specialty](#crossmodal-and-cross-specialty)
   - [Pharmacy and Clinical Decision](#pharmacy-and-clinical-decision)
   - [Agent-Driven AutoML](#agent-driven-automl)
+- [Method Summary Tables](#method-summary-tables)
 - [Benchmarks and Evaluation](#benchmarks-and-evaluation)
   - [Agent-Specific Benchmarks](#agent-specific-benchmarks)
   - [Evaluation Metrics Beyond Accuracy](#evaluation-metrics-beyond-accuracy)
@@ -489,6 +490,53 @@ Overall, this structure follows the lifecycle of a medical agent:
   <img src="https://img.shields.io/static/v1?label=&message=AutoML&color=6B7280&style=flat-square" alt="AutoML"> <img src="https://img.shields.io/static/v1?label=&message=Training%20Env&color=5F8791&style=flat-square" alt="Training Env">
 
 ---
+
+## Method Summary Tables
+
+The detailed reading list above is organized by year and subtopic. For faster scanning, the main method families are summarized below in compact tables.
+
+### Core Capability Methods
+
+| Capability | Representative Methods | Agent Role | Typical Evidence |
+|---|---|---|---|
+| **Perception** | LLaVA-Med, BiomedCLIP, RAD-DINO, MedSAM, MedRAX | Encodes images, regions, reports, and multimodal clinical inputs | Visual QA, grounding, segmentation, measurement |
+| **Reasoning** | CoT, Med-Gemini, MDAgents, MedAgents, MedReason | Performs differential diagnosis, clinical inference, and evidence synthesis | Medical QA, case reasoning, knowledge-graph reasoning |
+| **Planning** | ReAct, Plan-and-Solve, MedAgent-Pro, MDTeamGPT | Decomposes complex cases into executable subtasks | Tool chains, diagnostic workflows, team discussion |
+| **Memory** | RAG, GraphRAG, ClinicalAgents, longitudinal agent memory | Preserves patient context, prior evidence, and cross-case experience | Retrieval, EHR context, longitudinal follow-up |
+| **Tool Use** | Toolformer, HuggingGPT, MedRAX, EHRAgent, ABRA | Invokes calculators, viewers, databases, segmentation tools, and EHR APIs | Function calling, code execution, PACS/EHR interaction |
+| **Reflection** | Reflexion, Self-Refine, MedAgentAudit, Evo-MedAgent | Checks errors, audits reasoning, and improves future actions | Self-verification, multi-agent review, failure analysis |
+
+### Architecture Methods
+
+| Architecture Family | Coordination Pattern | Representative Systems | Best Fit |
+|---|---|---|---|
+| **Single-agent tool-augmented** | One controller routes among tools | CheXagent, MedRAX, MMedAgent, CXR-Agent | Focused imaging tasks with a known toolbox |
+| **Code-as-action agent** | Agent writes or executes code against clinical data/tools | EHRAgent, MedOpenCLAW, ABRA | EHR tables, imaging viewers, open-ended tool composition |
+| **Role-based multi-agent** | Specialized clinical roles communicate through an orchestrator | MDAgents, MedAgents, MDTeamGPT, M3Builder | Multispecialty reasoning, review, and consensus |
+| **Dynamic topology** | Communication graph changes by case difficulty | GPTSwarm, DyLAN, MaAS, dynamic graph agents | Hard or uncertain cases requiring adaptive compute |
+| **Self-evolving system** | Agent revises prompts, memory, tools, or workflows over time | Evo-MedAgent, MACRO, TissueLab, self-evolving simulators | Continuous improvement under controlled governance |
+
+### Training and Scaling Methods
+
+| Training / Scaling Strategy | What Changes | Representative Methods | Main Benefit |
+|---|---|---|---|
+| **Prompting / ICL** | Instructions and examples only | CoT, ReAct, Plan-and-Solve | Fast adaptation without finetuning |
+| **Supervised finetuning** | Model parameters trained on demonstrations | LLaVA-Med-style instruction tuning, medical VLM SFT | Better domain alignment and task format following |
+| **Preference optimization** | Model behavior aligned to preferred outputs | DPO/RLAIF-style medical alignment | Safer and more clinician-aligned responses |
+| **RL / verifiable reward** | Agent optimizes actions with outcome rewards | RLVR, GRPO, MedAgentGym-style training | Stronger multistep reasoning and tool-use reliability |
+| **Test-time scaling** | More search, verification, or agent deliberation at inference | Self-consistency, tree/graph search, multi-agent review | Better hard-case performance with controllable cost |
+| **Environment scaling** | Tool, data, simulator, and workflow environment expands | MedAgentBench, FHIR-AgentBench, ClinicalLab, ClinEnv | Capability gains without relying only on larger models |
+
+### Clinical Application Methods
+
+| Clinical Area | Main Agent Tasks | Representative Systems | Typical Workflow |
+|---|---|---|---|
+| **Radiology** | CXR/CT interpretation, report generation, measurement, triage | CheXagent, MedRAX, RadAgent, CXR-Agent, ABRA | Image review → tool calls → findings → report/audit |
+| **Pathology** | WSI navigation, region selection, tissue classification, report support | PathAgent, CPathAgent, WSI-Agents, TeamPath, TissueLab | Coarse-to-fine slide search → evidence-grounded diagnosis |
+| **Ophthalmology** | Multimodal eye imaging analysis and traceable reasoning | EyeAgent, EyecareGPT, OAAgent, EH-Benchmark | Modality selection → lesion/finding analysis → explanation |
+| **Oncology** | Tumor evidence synthesis, guideline support, outcome labeling | MAGDA, RadGPT, RadOnc-GPT, autonomous oncology agents | Imaging + guideline + longitudinal evidence integration |
+| **Neurology** | Neuroimaging interpretation, AD assessment, fairness-aware diagnosis | ADAgent, AD-CARE, CARE-AD, NeuroAgent | Multimodal evidence aggregation and longitudinal assessment |
+| **Cross-domain care** | Dialogue, EHR search, care pathway automation, administration | AgentClinic, MedAgentBench, ClinicalLab, HealthAgentBench | Patient interaction → EHR/tool execution → decision support |
 
 ## Benchmarks and Evaluation
 
