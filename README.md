@@ -169,19 +169,28 @@ Overall, this structure follows the lifecycle of a medical agent:
 | Reasoning | 2025 | arXiv | MedVLM-R1: Incentivizing Medical Reasoning via Reinforcement Learning | [Paper](https://arxiv.org/abs/2502.19634) | [Code](https://github.com/JZPeterPan/MedVLM-R1) | RLVR, reasoning |
 | Reasoning | 2026 | arXiv | CARE: Evidence-Grounded Agentic Reasoning for Medical VQA | [Paper](https://arxiv.org/abs/2603.01607) | - | Evidence grounding |
 | Reasoning / Causality | 2026 | arXiv | MedCausalX: Adaptive Causal Reasoning with Self-Reflection for Trustworthy Medical VLMs | [Paper](https://arxiv.org/abs/2603.23085) | - | Causal reasoning |
+| Reasoning / RAG | 2026 | arXiv | SEMA-RAG: Self-Evolving Multi-Agent Retrieval-Augmented Generation for Medical Reasoning | [Paper](https://arxiv.org/abs/2605.17101) | - | RAG, self-evolving |
+| Reasoning / RAG | 2026 | arXiv | From Conflict to Consensus: Boosting Medical Reasoning via Multi-Round Agentic RAG | [Paper](https://arxiv.org/abs/2603.03292) | [Code](https://github.com/NJU-RL/MA-RAG) | Multi-round RAG |
+| Reasoning / Debate | 2026 | ACL | Dialectic-Med: Mitigating Diagnostic Hallucinations via Counterfactual Adversarial Multi-Agent Debate | [Paper](https://arxiv.org/abs/2604.11258) | - | Debate, hallucination |
 | Planning | 2025 | arXiv | MedAgent-Pro: Evidence-based Multi-modal Medical Diagnosis via Multi-agent Collaboration | [Paper](https://arxiv.org/abs/2503.18968) | [Code](https://github.com/jinlab-imvr/MedAgent-Pro) | Planning, evidence |
 | Planning | 2025 | arXiv | MDTeamGPT: Self-evolving Multi-agent Framework for MDT Medical Consultation | [Paper](https://arxiv.org/abs/2503.13856) | - | MDT, consultation |
 | Planning | 2026 | arXiv | MedOpenClaw: Auditable VLM Agent for 3D Slicer Clinical Operations | [Paper](https://arxiv.org/abs/2603.24649) | - | Executable clinical tools |
 | Planning | 2026 | arXiv | MACRO: Experience-Driven Self-Skill Discovery for Medical Imaging Agents | [Paper](https://arxiv.org/abs/2603.05860) | - | Tool discovery |
+| Planning / Examination | 2026 | arXiv | MedExAgent: Training LLM Agents to Ask, Examine, and Diagnose in Noisy Clinical Environments | [Paper](https://arxiv.org/abs/2605.07058) | - | Ask-examine-diagnose |
 | Memory | 2025 | NeurIPS | A-MEM: Agentic Memory for LLM Agents | [Paper](https://arxiv.org/abs/2502.12110) | [Code](https://github.com/agiresearch/A-mem) | Agentic memory |
 | Memory | 2024 | EMNLP | RULE: Reliable Multimodal RAG for Factuality in Medical VLMs | [Paper](https://arxiv.org/abs/2407.05131) | [Code](https://github.com/richard-peng-xia/RULE) | RAG, factuality |
 | Memory | 2026 | arXiv | ClinicalAgents: Clinical Trial Multi-Agent System with Longitudinal Memory | [Paper](https://arxiv.org/abs/2601.01170) | - | Memory, clinical trials |
+| Memory / Safety | 2026 | arXiv | Detecting Clinical Discrepancies in Health Coaching Agents with Dual-Stream Memory | [Paper](https://arxiv.org/abs/2604.27045) | - | Memory reconciliation |
 | Tool Use | 2023 | ICLR 2024 | ToolLLM: Mastering 16,000+ Real-World APIs | [Paper](https://arxiv.org/abs/2307.16789) | [Code](https://github.com/OpenBMB/ToolBench) | Tool learning |
 | Tool Use | 2024 | EMNLP | EHRAgent: Code-empowered Tabular Reasoning on EHRs | [Paper](https://arxiv.org/abs/2401.07128) | [Code](https://github.com/wshi83/EhrAgent) | EHR, code-as-action |
 | Tool Use / Reflection | 2025 | ACL | ReflecTool: Reflection-Aware Tool-Augmented Clinical Agents | [Paper](https://arxiv.org/abs/2410.17657) | [Code](https://github.com/BlueZeros/ReflecTool) | Reflection, tools |
 | Tool Use | 2026 | arXiv | ABRA: Agentic Benchmark for Radiology Assistant | [Paper](https://arxiv.org/abs/2605.11224) | [Code](https://github.com/Luab/ABRA) | OHIF, Orthanc, tools |
+| Tool Use / FHIR | 2026 | arXiv | Reinforcement Learning for Tool-Calling Agents in Fast Healthcare Interoperability Resources | [Paper](https://arxiv.org/abs/2605.14126) | - | FHIR, tool calling |
+| Tool Use / FHIR | 2026 | arXiv | Empowering Locally Deployable Medical Agent via State Enhanced Logical Skills for FHIR-based Clinical Tasks | [Paper](https://arxiv.org/abs/2603.06902) | - | FHIR, local deployment |
 | Environment Scaling | 2026 | arXiv | EnvScaler: Scaling Tool-Interactive Environments for Agents | [Paper](https://arxiv.org/abs/2601.05808) | [Code](https://github.com/RUC-NLPIR/EnvScaler) | Tool environment, scaling |
 | Reflection / Audit | 2025 | arXiv | MedAgentAudit: Auditing Collaborative Failure Modes in Medical Multi-Agent Systems | [Paper](https://arxiv.org/abs/2510.10185) | [Code](https://github.com/MedX-PKU/MedAgentAudit) | Safety, audit |
+| Reflection / Guardrails | 2026 | arXiv | CareGuardAI: Context-Aware Multi-Agent Guardrails for Clinical Safety and Hallucination Mitigation | [Paper](https://arxiv.org/abs/2604.26959) | - | Guardrails, safety |
+| Reflection / Verification | 2026 | arXiv | CuraView: Multi-Agent Hallucination Detection with GraphRAG-Enhanced Knowledge Verification | [Paper](https://arxiv.org/abs/2605.03476) | - | Hallucination detection |
 | Self-Improvement | 2026 | arXiv | Evo-MedAgent: Evolutionary Agent Self-Improvement | [Paper](https://arxiv.org/abs/2604.14475) | - | Evolution, self-improvement |
 
 ## Architecture Paradigms
@@ -193,12 +202,16 @@ Overall, this structure follows the lifecycle of a medical agent:
 | Single-agent tool-augmented | 2024 | arXiv | MMedAgent: Learning to Use Medical Tools | [Paper](https://arxiv.org/abs/2407.02483) | - | Tool routing |
 | Code-as-action | 2024 | EMNLP | EHRAgent: Code-empowered EHR Reasoning | [Paper](https://arxiv.org/abs/2401.07128) | [Code](https://github.com/wshi83/EhrAgent) | EHR, code execution |
 | Code-as-action | 2026 | arXiv | MedOpenCLAW / MedFlowBench: Auditing Medical Imaging Workflow Agents | [Paper](https://arxiv.org/abs/2603.24649) | - | 3D Slicer, QuPath |
+| Code-as-action | 2026 | arXiv | FastOMOP: Reliable Agentic Real-World Evidence Generation on OMOP CDM Data | [Paper](https://arxiv.org/abs/2604.24572) | - | OMOP, RWE |
 | Role-based multi-agent | 2024 | NeurIPS | MDAgents: Adaptive Collaboration of LLMs for Medical Decision-Making | [Paper](https://arxiv.org/abs/2404.15155) | [Code](https://github.com/mitmedialab/MDAgents) | Multi-agent, panel |
 | Role-based multi-agent | 2024 | arXiv | MedAgents: LLM Collaborators for Medical Reasoning | [Paper](https://arxiv.org/abs/2311.10537) | [Code](https://github.com/gersteinlab/MedAgents) | Role play, debate |
 | Role-based multi-agent | 2025 | arXiv | MDTeamGPT: Multi-disciplinary Team Medical Consultation | [Paper](https://arxiv.org/abs/2503.13856) | - | MDT, consultation |
+| Role-based multi-agent | 2026 | arXiv | Meissa: Multi-modal Medical Agentic Intelligence | [Paper](https://arxiv.org/abs/2603.09018) | [Code](https://github.com/Schuture/Meissa) | Multimodal, generalist |
+| Role-based multi-agent | 2026 | arXiv | XrayClaw: Cooperative-Competitive Multi-Agent Alignment for Trustworthy Chest X-ray Diagnosis | [Paper](https://arxiv.org/abs/2604.02695) | - | CXR, alignment |
 | Dynamic topology | 2024 | ICML | GPTSwarm: Language Agents as Optimizable Graphs | [Paper](https://arxiv.org/abs/2402.16823) | [Code](https://github.com/metauto-ai/GPTSwarm) | Topology search |
 | Dynamic topology | 2023 | arXiv | DyLAN: Dynamic LLM-Agent Network | [Paper](https://arxiv.org/abs/2310.02170) | - | Agent selection |
 | Self-evolving architecture | 2026 | arXiv | Evo-MedAgent: Evolutionary Agent Self-Improvement | [Paper](https://arxiv.org/abs/2604.14475) | - | Self-improvement |
+| Research co-agent | 2026 | arXiv | VERITAS: Multi-Agent Co-Scientist for Verifiable Image-Derived Hypothesis Testing | [Paper](https://arxiv.org/abs/2604.12144) | [Code](https://github.com/LucZot/veritas) | Co-scientist, imaging |
 
 <p align="center">
   <img src="figures/fig4_architectures_topologies1.png" alt="Architecture paradigms and topologies for medical agents" width="900">
@@ -241,21 +254,39 @@ Overall, this structure follows the lifecycle of a medical agent:
 | Radiology | 2026 | ACL | MARCH: Multi-Agent Radiology Clinical Hierarchy for CT Report Generation | [Paper](https://arxiv.org/abs/2604.16175) | - | CT, report generation |
 | Radiology | 2026 | arXiv | RadAgent: Autonomous Radiology Workflow Management | [Paper](https://arxiv.org/abs/2604.15231) | [Code](https://github.com/eth-medical-ai-lab/rad-agent) | Workflow, CT |
 | Radiology / Neurology | 2026 | arXiv | Agentic LLMs for Training-Free Neuro-Radiological Image Analysis | [Paper](https://arxiv.org/abs/2604.16729) | - | Brain MRI, zero-shot |
+| Radiology / Neurology | 2026 | arXiv | GAZE: Grounded Agentic Zero-shot Evaluation with Viewer-Level Tools on Rare Brain MRI | [Paper](https://arxiv.org/abs/2605.00876) | - | Brain MRI, viewer tools |
+| Radiology / Oncology | 2026 | arXiv | DeepTumorVQA: Hierarchical 3D CT Benchmark for Tumor-Centric Visual Question Answering | [Paper](https://arxiv.org/abs/2605.09679) | - | 3D CT, tumor VQA |
+| Radiology | 2026 | arXiv | XrayClaw: Cooperative-Competitive Multi-Agent Alignment for Trustworthy Chest X-ray Diagnosis | [Paper](https://arxiv.org/abs/2604.02695) | - | CXR, alignment |
 | Radiology | 2025 | ICML | MedRAX: Tool Orchestration for Chest X-ray Analysis | [Paper](https://arxiv.org/abs/2502.02673) | [Code](https://github.com/bowang-lab/MedRAX) | CXR, tools |
 | Radiology | 2025 | ICLR 2026 | MedAgent-Pro: Evidence-Based Multimodal Medical Diagnosis | [Paper](https://arxiv.org/abs/2503.18968) | [Code](https://github.com/jinlab-imvr/MedAgent-Pro) | Evidence, multimodal |
 | Radiology | 2025 | arXiv | CXR-Agent: Automated Chest Radiograph Interpretation | [Paper](https://arxiv.org/abs/2510.21324) | [Code](https://github.com/laojiahuo2003/CXRAgent) | CXR, reporting |
+| Radiology | 2025 | arXiv | RadFabric: Agentic AI System with Reasoning Capability for Radiology | [Paper](https://arxiv.org/abs/2506.14142) | [Project](https://yidong11.github.io/Towards-Multi-Modal-Agentic-AI-System-for-Chest-X-Ray/) | CXR, reasoning |
 | Pathology | 2025 | arXiv | PathAgent: Navigator-Perceptor-Executor Loop for Whole-Slide Images | [Paper](https://arxiv.org/abs/2511.17052) | [Code](https://github.com/G14nTDo4/PathAgent) | WSI, navigation |
 | Pathology | 2025 | ICCV | PathFinder: Interactive Multiagent Whole-Slide Image Search | [Paper](https://arxiv.org/abs/2502.08916) | - | WSI, multi-agent |
 | Pathology | 2025 | MICCAI | WSI-Agents: Collaborative Multiagent WSI Analysis | [Paper](https://arxiv.org/abs/2507.14680) | [Code](https://github.com/CVI-SZU/WSI-Agents) | WSI, collaboration |
 | Pathology | 2025 | arXiv | TissueLab: Agentic Tissue Analysis Environment | [Paper](https://arxiv.org/abs/2509.20279) | [Code](https://github.com/zhihuanglab/TissueLab-SDK) | Environment, tissue |
+| Ultrasound | 2026 | arXiv | Echo-alpha: Large Agentic Multimodal Reasoning Model for Ultrasound Interpretation | [Paper](https://arxiv.org/abs/2604.28011) | - | Ultrasound, reasoning |
+| Dermatology | 2026 | MICCAI | DermAgent: Self-Reflective Agentic System for Dermatological Image Analysis | [Paper](https://arxiv.org/abs/2605.14403) | - | Dermatology, tools |
+| Dermatology | 2026 | arXiv | SkinGPT-X: Self-Evolving Collaborative Multi-Agent System for Dermatological Diagnosis | [Paper](https://arxiv.org/pdf/2603.26122) | - | Dermatology, self-evolving |
 | Ophthalmology | 2025 | arXiv | EyeAgent: Tool-Orchestrated Ophthalmic Agent across Imaging Modalities | [Paper](https://arxiv.org/abs/2511.09394) | - | 53 tools, 23 modalities |
 | Ophthalmology | 2025 | arXiv | EyecareGPT: Multimodal LLM for Ophthalmic Imaging | [Paper](https://arxiv.org/abs/2504.13650) | [Code](https://github.com/dcdmllm/eyecaregpt) | Multimodal, eye imaging |
 | Oncology | 2024 | arXiv | MAGDA: Guideline-Driven Diagnostic Assistance | [Paper](https://arxiv.org/abs/2409.06351) | - | Guidelines, oncology |
+| Cardiovascular | 2025 | MICCAI | Multi-Agent Reasoning for Cardiovascular Imaging Phenotype Analysis | [Paper](https://arxiv.org/abs/2507.03460) | [Code](https://github.com/MengyunQ/MESHAgents) | Cardiovascular imaging |
 | Neurology | 2025 | npj Digital Medicine | CARE-AD: Multiagent Alzheimer's Prediction | [Paper](https://www.nature.com/articles/s41746-025-01940-4) | - | Longitudinal, AD |
+| Neurology / Care | 2026 | arXiv | AI-Care: Conversational Agentic System for Task Coordination in Alzheimer's Disease Care | [Paper](https://arxiv.org/abs/2605.08480) | - | Care coordination |
 | Cross-Specialty | 2026 | arXiv | MACRO: Self-Evolving Crossmodal Agent with Tool Discovery | [Paper](https://arxiv.org/abs/2603.05860) | - | Self-evolving, tool discovery |
 | Cross-Specialty | 2024 | ICLR 2025 | MMedAgent: Learning to Use Medical Tools with Multimodal Agent | [Paper](https://arxiv.org/abs/2407.02483) | [Code](https://github.com/Wangyixinxin/MMedAgent) | Tool library |
+| Patient-Facing | 2026 | arXiv | SymptomAI: Conversational AI Agent for Everyday Symptom Assessment | [Paper](https://arxiv.org/abs/2605.04012) | - | Symptom assessment |
+| Patient-Facing | 2026 | arXiv | ClinicBot: Guideline-Grounded Clinical Chatbot with Evidence RAG and Verifiable Citations | [Paper](https://arxiv.org/abs/2605.00846) | - | Patient dialogue, RAG |
 | Pharmacy / Downstream Care | 2025 | arXiv | TxAgent: Therapeutic Reasoning Agent with Multi-Step Tool Use | [Paper](https://arxiv.org/abs/2503.10970) | [Code](https://github.com/mims-harvard/TxAgent) | Drug safety |
 | Pharmacy / Downstream Care | 2024 | MLHC | MALADE: Multiagent Adverse Drug Event Detection | [Paper](https://arxiv.org/abs/2408.01869) | [Code](https://github.com/jihyechoi77/malade) | Safety, ADE |
+| Drug Discovery | 2025 | arXiv | RAG-Enhanced Collaborative LLM Agents for Drug Discovery | [Paper](https://arxiv.org/abs/2502.17506) | - | Drug discovery, RAG |
+| Drug Discovery | 2025 | arXiv | Large Language Model Agent for Modular Task Execution in Drug Discovery | [Paper](https://arxiv.org/abs/2507.02925) | [Code](https://github.com/hoon-ock/AgentD) | Modular execution |
+| Healthcare Administration | 2026 | arXiv | CHI-Bench: End-to-End Long-Horizon Healthcare Workflow Automation | [Paper](https://arxiv.org/abs/2605.16679) | [Code](https://github.com/actava-ai/chi-bench), [Project](https://actava.ai/benchmarks) | Administration, workflow |
+| Healthcare Administration | 2026 | arXiv | HealthAdminBench: Computer-Use Agents on Healthcare Administration Tasks | [Paper](https://arxiv.org/abs/2604.09937) | - | Computer use |
+| EHR / Clinical Notes | 2026 | arXiv | AgentEHR: Autonomous Clinical Decision-Making via Retrospective Summarization | [Paper](https://arxiv.org/abs/2601.13918) | - | EHR, summarization |
+| EHR / Clinical Notes | 2025 | arXiv | Trustworthy Agents for Electronic Health Records through Confidence Estimation | [Paper](https://arxiv.org/abs/2508.19096) | [Code](https://github.com/ldi-kyunghee/TrustEHRAgent) | EHR, confidence |
+| EHR / Clinical Notes | 2025 | arXiv | Infherno: Agent-Based FHIR Resource Synthesis from Free-Form Clinical Notes | [Paper](https://arxiv.org/abs/2507.12261) | [Code](https://github.com/j-frei/Infherno) | FHIR synthesis |
 | AutoML | 2025 | MICCAI | M3Builder: Automated Medical Model Building via Agent Pipeline | [Paper](https://arxiv.org/abs/2502.20301) | [Code](https://github.com/MAGIC-AI4Med/M3Builder) | AutoML, pipeline |
 
 ## Benchmarks and Evaluation
@@ -313,7 +344,10 @@ Overall, this structure follows the lifecycle of a medical agent:
 | 2025 | MedAgentSim | Self-evolving multi-agent clinical simulation | [Paper](https://arxiv.org/abs/2503.22678) | [Code](https://github.com/MAXNORM8650/MedAgentSim) |
 | 2025 | PatientSim | Persona-driven patient simulation from MIMIC-IV | [Paper](https://arxiv.org/abs/2505.17818) | [Code](https://github.com/dek924/PatientSim) |
 | 2026 | MedDialogRubrics | Multiturn diagnostic consultation with rubrics | [Paper](https://arxiv.org/abs/2601.03023) | - |
+| 2026 | MedMemoryBench | Agent memory in personalized healthcare | [Paper](https://arxiv.org/abs/2605.11814) | - |
 | 2026 | AgentRx | Single vs multi-agent multimodal clinical prediction | [Paper](https://arxiv.org/abs/2605.10286) | - |
+| 2026 | DeepTumorVQA | Hierarchical 3D CT tumor VQA for VLMs and tool-augmented agents | [Paper](https://arxiv.org/abs/2605.09679) | - |
+| 2026 | MedProbeBench | Deep evidence integration for expert-level medical guideline reasoning | [Paper](https://arxiv.org/abs/2604.18418) | - |
 | 2026 | ABRA | Radiology agent with OHIF, Orthanc, and 21 tools | [Paper](https://arxiv.org/abs/2605.11224) | [Code](https://github.com/Luab/ABRA) |
 | 2026 | AutoMedBench | Workflow-aware autonomous medical AI research | [Paper](https://arxiv.org/abs/2606.01961) | [Code](https://github.com/automedbench/automedbench) |
 | 2026 | DeepMed | Medical deep-research agent with multi-hop search | [Paper](https://aclanthology.org/2026.findings-acl.904) | - |
@@ -327,6 +361,7 @@ Overall, this structure follows the lifecycle of a medical agent:
 | 2024 | EHRAgent | Code-empowered multitabular EHR reasoning | [Paper](https://arxiv.org/abs/2401.07128) | [Code](https://github.com/wshi83/EhrAgent) |
 | 2025 | ClinicalLab | Multidepartmental clinical benchmark | [Paper](https://arxiv.org/abs/2406.13890) | [Code](https://github.com/WeixiangYAN/ClinicalLab) |
 | 2025 | MedChain | Sequential clinical workflow benchmark | [Paper](https://arxiv.org/abs/2412.01605) | [Code](https://github.com/ljwztc/MedChain) |
+| 2025 | CP-Env | Clinical pathways in a controllable hospital environment | [Paper](https://arxiv.org/abs/2512.10206) | [Code](https://github.com/SPIRAL-MED/CP_ENV) |
 | 2025 | MedHELM | Holistic medical LLM evaluation | [Paper](https://arxiv.org/abs/2505.23802) | [Code](https://github.com/stanford-crfm/helm) |
 | 2025 | MedAgentGym | Code-based medical reasoning training environment | [Paper](https://arxiv.org/abs/2506.04405) | [Code](https://github.com/wshi83/MedAgentGym) |
 | 2025 | FHIR-AgentBench | HL7 FHIR interoperable EHR tasks | [Paper](https://arxiv.org/abs/2509.19319) | [Code](https://github.com/glee4810/FHIR-AgentBench) |
@@ -439,6 +474,10 @@ Overall, this structure follows the lifecycle of a medical agent:
 | [AgentClinic](https://github.com/SamuelSchmidgall/AgentClinic) | Benchmark | Clinical agent evaluation |
 | [MedAgentGym](https://github.com/wshi83/MedAgentGym) | Framework | Agent training gymnasium |
 | [TxAgent](https://github.com/mims-harvard/TxAgent) | Framework | Therapeutic reasoning agent |
+| [Anthropic Healthcare Skills](https://github.com/anthropics/healthcare) | Tooling | Healthcare skills including FHIR developer tools, prior authorization review, and clinical trial protocol generation |
+| [FHIR MCP Server](https://github.com/wso2/fhir-mcp-server) | MCP Server | FHIR-compliant MCP server with CRUD operations and LOINC integration |
+| [Google Cloud Healthcare API MCP](https://github.com/Kartha-AI/google-cloud-healthcare-api-mcp) | MCP Server | MCP server for Google Cloud Healthcare API FHIR resources and medical research APIs |
+| [AWS HealthLake MCP Server](https://awslabs.github.io/mcp/servers/healthlake-mcp-server) | MCP Server | AWS HealthLake FHIR operations exposed for agent workflows |
 | [Awesome-AI-Agents-for-Healthcare](https://github.com/AgenticHealthAI/Awesome-AI-Agents-for-Healthcare) | List | Related awesome list |
 
 ---
