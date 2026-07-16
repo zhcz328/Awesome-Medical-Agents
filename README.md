@@ -143,7 +143,6 @@ Overall, this structure follows the lifecycle of a medical agent:
   - [Crossmodal and Cross-Specialty](#crossmodal-and-cross-specialty)
   - [Pharmacy and Clinical Decision](#pharmacy-and-clinical-decision)
   - [Agent-Driven AutoML](#agent-driven-automl)
-- [Method Summary Tables](#method-summary-tables)
 - [Benchmarks and Evaluation](#benchmarks-and-evaluation)
   - [Agent-Specific Benchmarks](#agent-specific-benchmarks)
   - [Evaluation Metrics Beyond Accuracy](#evaluation-metrics-beyond-accuracy)
@@ -157,6 +156,26 @@ Overall, this structure follows the lifecycle of a medical agent:
 > Papers with publicly released code are marked with 🌟.
 
 ## Core Capability Modules
+
+| Module | Year | Venue | Title / Method | Paper | Code / Data | Tags |
+|---|---:|---|---|---|---|---|
+| Perception | 2023 | NeurIPS | LLaVA-Med: Training a Large Language-and-Vision Assistant for Biomedicine | [Paper](https://arxiv.org/abs/2306.00890) | [Code](https://github.com/microsoft/LLaVA-Med) | Medical VLM, VQA |
+| Perception | 2024 | arXiv | CheXagent: Towards a Foundation Model for Chest X-Ray Interpretation | [Paper](https://arxiv.org/abs/2401.12208) | [Code](https://github.com/Stanford-AIMI/CheXagent) | CXR, report understanding |
+| Perception | 2024 | Nature Methods | MedSAM: Segment Anything in Medical Images | [Paper](https://www.nature.com/articles/s41592-024-02260-z) | [Code](https://github.com/bowang-lab/MedSAM) | Segmentation, grounding |
+| Perception | 2025 | arXiv | MedRAX: Medical Reasoning Agent for Chest X-ray | [Paper](https://arxiv.org/abs/2502.02673) | [Code](https://github.com/bowang-lab/MedRAX) | Tool use, CXR |
+| Reasoning | 2024 | NeurIPS | MDAgents: An Adaptive Collaboration of LLMs for Medical Decision-Making | [Paper](https://arxiv.org/abs/2404.15155) | [Code](https://github.com/mitmedialab/MDAgents) | Multi-agent, diagnosis |
+| Reasoning | 2024 | arXiv | MedAgents: Large Language Models as Collaborators for Zero-shot Medical Reasoning | [Paper](https://arxiv.org/abs/2311.10537) | [Code](https://github.com/gersteinlab/MedAgents) | Multi-agent, reasoning |
+| Reasoning | 2025 | arXiv | MedReason: Medical Reasoning with Knowledge Graph Grounding | [Paper](https://arxiv.org/abs/2504.00993) | [Code](https://github.com/UCSC-VLAA/MedReason) | KG, reasoning chains |
+| Planning | 2025 | arXiv | MedAgent-Pro: Evidence-based Multi-modal Medical Diagnosis via Multi-agent Collaboration | [Paper](https://arxiv.org/abs/2503.18968) | [Code](https://github.com/jinlab-imvr/MedAgent-Pro) | Planning, evidence |
+| Planning | 2025 | arXiv | MDTeamGPT: Self-evolving Multi-agent Framework for MDT Medical Consultation | [Paper](https://arxiv.org/abs/2503.13856) | - | MDT, consultation |
+| Memory | 2026 | arXiv | ClinicalAgents: Clinical Trial Multi-Agent System with Longitudinal Memory | [Paper](https://arxiv.org/abs/2601.01170) | - | Memory, clinical trials |
+| Tool Use | 2024 | EMNLP | EHRAgent: Code-empowered Tabular Reasoning on EHRs | [Paper](https://arxiv.org/abs/2401.07128) | [Code](https://github.com/wshi83/EhrAgent) | EHR, code-as-action |
+| Tool Use | 2026 | arXiv | ABRA: Agentic Benchmark for Radiology Assistant | [Paper](https://arxiv.org/abs/2605.11224) | [Code](https://github.com/Luab/ABRA) | OHIF, Orthanc, tools |
+| Environment Scaling | 2026 | arXiv | EnvScaler: Scaling Tool-Interactive Environments for Agents | [Paper](https://arxiv.org/abs/2601.05808) | [Code](https://github.com/RUC-NLPIR/EnvScaler) | Tool environment, scaling |
+| Reflection / Audit | 2025 | arXiv | MedAgentAudit: Auditing Collaborative Failure Modes in Medical Multi-Agent Systems | [Paper](https://arxiv.org/abs/2510.10185) | [Code](https://github.com/MedX-PKU/MedAgentAudit) | Safety, audit |
+| Self-Improvement | 2026 | arXiv | Evo-MedAgent: Evolutionary Agent Self-Improvement | [Paper](https://arxiv.org/abs/2604.14475) | - | Evolution, self-improvement |
+
+<!-- Original bullet-style core capability reading list retained for reference during table conversion.
 
 ### Perception
 > Visual encoders, multiscale processing, and visual tokenization for bridging continuous image features with discrete LLM token spaces.
@@ -260,7 +279,25 @@ Overall, this structure follows the lifecycle of a medical agent:
 
 ---
 
+-->
+
 ## Architecture Paradigms
+
+| Family | Year | Venue | Title / Method | Paper | Code / Data | Tags |
+|---|---:|---|---|---|---|---|
+| Single-agent tool-augmented | 2024 | arXiv | CheXagent: Foundation Model for Chest X-Ray Interpretation | [Paper](https://arxiv.org/abs/2401.12208) | [Code](https://github.com/Stanford-AIMI/CheXagent) | Single agent, CXR |
+| Single-agent tool-augmented | 2025 | arXiv | MedRAX: Medical Reasoning Agent for Chest X-ray | [Paper](https://arxiv.org/abs/2502.02673) | [Code](https://github.com/bowang-lab/MedRAX) | Tools, reporting |
+| Single-agent tool-augmented | 2024 | arXiv | MMedAgent: Learning to Use Medical Tools | [Paper](https://arxiv.org/abs/2407.02483) | - | Tool routing |
+| Code-as-action | 2024 | EMNLP | EHRAgent: Code-empowered EHR Reasoning | [Paper](https://arxiv.org/abs/2401.07128) | [Code](https://github.com/wshi83/EhrAgent) | EHR, code execution |
+| Code-as-action | 2026 | arXiv | MedOpenCLAW / MedFlowBench: Auditing Medical Imaging Workflow Agents | [Paper](https://arxiv.org/abs/2603.24649) | - | 3D Slicer, QuPath |
+| Role-based multi-agent | 2024 | NeurIPS | MDAgents: Adaptive Collaboration of LLMs for Medical Decision-Making | [Paper](https://arxiv.org/abs/2404.15155) | [Code](https://github.com/mitmedialab/MDAgents) | Multi-agent, panel |
+| Role-based multi-agent | 2024 | arXiv | MedAgents: LLM Collaborators for Medical Reasoning | [Paper](https://arxiv.org/abs/2311.10537) | [Code](https://github.com/gersteinlab/MedAgents) | Role play, debate |
+| Role-based multi-agent | 2025 | arXiv | MDTeamGPT: Multi-disciplinary Team Medical Consultation | [Paper](https://arxiv.org/abs/2503.13856) | - | MDT, consultation |
+| Dynamic topology | 2024 | ICML | GPTSwarm: Language Agents as Optimizable Graphs | [Paper](https://arxiv.org/abs/2402.16823) | [Code](https://github.com/metauto-ai/GPTSwarm) | Topology search |
+| Dynamic topology | 2023 | arXiv | DyLAN: Dynamic LLM-Agent Network | [Paper](https://arxiv.org/abs/2310.02170) | - | Agent selection |
+| Self-evolving architecture | 2026 | arXiv | Evo-MedAgent: Evolutionary Agent Self-Improvement | [Paper](https://arxiv.org/abs/2604.14475) | - | Self-improvement |
+
+<!-- Original bullet-style architecture reading list retained for reference during table conversion.
 
 <p align="center">
   <img src="figures/fig4_architectures_topologies1.png" alt="Architecture paradigms and topologies for medical agents" width="900">
