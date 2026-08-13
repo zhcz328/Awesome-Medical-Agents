@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <a href="https://arxiv.org/pdf/2607.11175v1"><img src="https://img.shields.io/badge/Survey%20Paper-arXiv-blue" alt="Survey Paper"></a>
+  <a href="https://arxiv.org/pdf/2607.11175v2"><img src="https://img.shields.io/badge/Survey%20Paper-arXiv-blue" alt="Survey Paper"></a>
   <a href="https://github.com/sindresorhus/awesome"><img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="Awesome"></a>
   <a href="https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity"><img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" alt="Maintenance"></a>
   <a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat" alt="PRs Welcome"></a>
