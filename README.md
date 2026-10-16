@@ -18,7 +18,7 @@
 </p>
 
 <p align="center">
-  <img src="figures/首页图.png" alt="Survey overview: scaling medical agents from assistance to autonomy" width="720">
+  <img src="figures/medical-agents-overview.png" alt="Survey overview: scaling medical agents from assistance to autonomy" width="720">
 </p>
 
 ---
