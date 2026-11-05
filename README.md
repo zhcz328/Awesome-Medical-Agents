@@ -357,6 +357,7 @@ Overall, this structure follows the lifecycle of a medical agent:
 | 2026 | DeepMed | Medical deep-research agent with multi-hop search | [Paper](https://aclanthology.org/2026.findings-acl.904) | - |
 | 2026 | MedResearchBench | Medical research agents on clinical research tasks | [Paper](https://www.medrxiv.org/content/10.64898/2026.03.30.26349749v1) | - |
 | 2026 | EHRBench | EHR-grounded clinical decision making | [Paper](https://arxiv.org/abs/2605.30637) | - |
+| 2026 | Patients With Personality (PWP) | HEXACO-parametrized patient simulation with selective disclosure for doctor-LLM evaluation | [Paper](https://arxiv.org/abs/2606.17441) | [Code](https://github.com/mo374z/PatientsWithPersonality) |
 
 #### Level 3: System-Level Clinical Operation
 
