@@ -357,6 +357,7 @@ Overall, this structure follows the lifecycle of a medical agent:
 | 2026 | DeepMed | Medical deep-research agent with multi-hop search | [Paper](https://aclanthology.org/2026.findings-acl.904) | - |
 | 2026 | MedResearchBench | Medical research agents on clinical research tasks | [Paper](https://www.medrxiv.org/content/10.64898/2026.03.30.26349749v1) | - |
 | 2026 | EHRBench | EHR-grounded clinical decision making | [Paper](https://arxiv.org/abs/2605.30637) | - |
+| 2026 | GPAgentBench-2K | Primary-care GP consultation as a constrained MDP: 6 clinical actions, workflow prior, safety-informed referral | [Paper](https://aclanthology.org/2026.emnlp-main.644.pdf) | [Code](https://github.com/jianing-lab/GPAgentBench) |
 
 #### Level 3: System-Level Clinical Operation
 
